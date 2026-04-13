@@ -82,7 +82,7 @@
 - [x] GitHub Secrets 设置：`VERCEL_TOKEN` + `VERCEL_ORG_ID`
 - [x] 创建 `.github/workflows/deploy.yml`
 - [x] Google Search Console 验证 ✅ + sitemap 已提交
-- [ ] Bing Webmaster Tools + IndexNow key（注册后把 key 告诉 Claude，设 GitHub Secret `INDEXNOW_KEY`）
+- [x] Bing Webmaster Tools 验证 ✅ + IndexNow key `4a9bd857b68d418e8d86799b7b897fc8` ✅
 - [x] `add-article.js` BASE_URL 已设置
 
 ---
