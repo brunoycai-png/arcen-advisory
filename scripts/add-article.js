@@ -24,7 +24,7 @@ const fs   = require('fs');
 const path = require('path');
 
 // ── CONFIG — update for each project ────────────────────────────────────────
-const BASE_URL = 'https://[YOUR-PROJECT].vercel.app';  // ← change this
+const BASE_URL = 'https://arcen-advisory.vercel.app';
 // ─────────────────────────────────────────────────────────────────────────────
 
 const ROOT     = path.join(__dirname, '..');
