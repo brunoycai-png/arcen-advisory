@@ -1504,6 +1504,7 @@ var PLACEHOLDERS = {
 
 function switchLang(lang) {
   localStorage.setItem('ag_lang', lang);
+  localStorage.setItem('arcen_lang', lang);
   document.body.className = document.body.className.replace(/\blang-\S+/g, '').trim();
   document.body.classList.add('lang-' + lang);
   document.querySelectorAll('.lang-b').forEach(function(b) {
@@ -1556,7 +1557,11 @@ function carPage(id, dir) {
 function carDraw(id) {
   var c = CAR[id];
   var track = document.getElementById(id + '-track');
-  if (track) track.style.transform = 'translateX(-' + (c.page * 100) + '%)';
+  if (track) {
+    var outer = track.parentElement;
+    var slideW = outer ? outer.offsetWidth : 0;
+    track.style.transform = 'translateX(-' + (c.page * slideW) + 'px)';
+  }
   var prev = document.getElementById(id + '-prev');
   var next = document.getElementById(id + '-next');
   if (prev) prev.disabled = c.page === 0;
@@ -1566,6 +1571,10 @@ function carDraw(id) {
 document.addEventListener('DOMContentLoaded', function() {
   carInit('cases', document.querySelectorAll('#cases-track .car-slide').length || 1);
   carInit('blog',  document.querySelectorAll('#blog-track .car-slide').length || 1);
+});
+
+window.addEventListener('resize', function() {
+  Object.keys(CAR).forEach(function(id) { carDraw(id); });
 });
 
 // ── AI CHAT ───────────────────────────────────────────────────────────────────
