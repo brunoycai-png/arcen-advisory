@@ -93,3 +93,62 @@
 git add -A && git commit -m "..." && git push origin main
 # 约 60 秒后验证线上
 ```
+
+---
+
+## [RULE] 安全原则
+
+| 类型 | 规则 |
+|------|------|
+| Supabase anon key | ✅ 可以放前端，靠 RLS 保护 |
+| Groq API key | ❌ 绝不放前端，必须放 Vercel 环境变量 + `/api/chat.js` serverless |
+| 其他第三方 secret | ❌ 同上，环境变量 |
+
+**RLS 验证：** 每次新建 Supabase 表后，必须确认 `rowsecurity=true` + 只开 anon INSERT，无 SELECT。
+
+**速率限制（待做）：** 联系表单 + AI 对话目前无防刷保护。上线流量增大后，在 Supabase 侧加 `pg_net` 或在 Vercel Edge Middleware 加限流。
+
+---
+
+## [CHECKLIST] 上线前必查（每次改动后过一遍）
+
+### 功能
+- [ ] 三语言切换正常（EN/FR/ZH）
+- [ ] AI 抽屉开关动画正确
+- [ ] 轮播按钮状态正确（单页时 ← → 均 disabled）
+- [ ] 联系表单提交后显示成功状态
+- [ ] D3 地图在 4s 内加载（fetch world-atlas CDN）
+
+### 手机端（375px）
+- [ ] 所有 nav 交互按钮可见可点（Ask ARCEN、Contact）
+- [ ] 语言切换按钮可见
+- [ ] 表单字段可填写
+- [ ] 无横向滚动条
+
+### 代码质量
+- [ ] 所有 `fetch()` 调用有 `.catch()`
+- [ ] 新 API 调用：secret key → 环境变量，不进前端
+- [ ] 无 `console.log` 遗留
+- [ ] 删除死代码 CSS（如旧 ID 选择器）
+
+### 安全
+- [ ] `curl -I https://arcen-advisory.vercel.app` 确认 CSP、HSTS、X-Frame-Options 存在
+- [ ] Supabase RLS：新表只开 anon INSERT，无 SELECT
+- [ ] 无 secret key 硬编码在 index.html
+
+### QA 浏览器验证
+- [ ] 桌面 1280px：控制台 0 错误
+- [ ] 手机 375px：控制台 0 错误，交互元素全可用
+- [ ] 三语言分别测一遍 AI 对话
+
+---
+
+## [FACT] 安全现状
+
+| 项目 | 状态 |
+|------|------|
+| Supabase anon key 前端暴露 | ✅ 安全（RLS 保护，anon 只能 INSERT） |
+| RLS 开启 | ✅ inquiries + chat_logs 均已开启 |
+| Groq API key | ✅ 当前不存在（AI 对话用本地关键词匹配） |
+| 速率限制 | ⚠️ 待做（当前无防刷） |
+| CSP unsafe-inline | ⚠️ 单文件架构不可避免，已知风险 |
