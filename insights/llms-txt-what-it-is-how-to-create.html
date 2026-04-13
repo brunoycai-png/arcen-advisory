@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>The llms.txt File: What It Is, Why It Matters, and How to Create One in 30 Minutes | ARCEN Strategic Advisory</title>
+<link rel="alternate" hreflang="en"        href="https://arcen-advisory.vercel.app/insights/llms-txt-what-it-is-how-to-create.html">
+<link rel="alternate" hreflang="fr"        href="https://arcen-advisory.vercel.app/insights/llms-txt-what-it-is-how-to-create.html">
+<link rel="alternate" hreflang="zh-Hans"   href="https://arcen-advisory.vercel.app/insights/llms-txt-what-it-is-how-to-create.html">
+<link rel="alternate" hreflang="x-default" href="https://arcen-advisory.vercel.app/insights/llms-txt-what-it-is-how-to-create.html">
+<meta name="description" content="llms.txt is a plain-text file at your domain root that tells AI engines who you are and what you do. Companies like Stripe, Zapier, and Cloudflare have implemented it. Most professional services firms have not. Creating one takes 30 minutes.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://arcen-advisory.vercel.app/insights/llms-txt-what-it-is-how-to-create.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="ARCEN Strategic Advisory">
+<meta property="og:title" content="The llms.txt File: What It Is, Why It Matters, and How to Create One in 30 Minutes">
+<meta property="og:description" content="A plain-text briefing document for AI crawlers. Stripe, Zapier, Cloudflare have it. Most professional services firms do not. Here is how to create one.">
+<meta property="og:url" content="https://arcen-advisory.vercel.app/insights/llms-txt-what-it-is-how-to-create.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="The llms.txt File: What It Is, Why It Matters, and How to Create One in 30 Minutes">
+<meta name="twitter:description" content="llms.txt tells AI engines who you are before they index you. Takes 30 minutes. Most professional services firms have not done it yet.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "The llms.txt File: What It Is, Why It Matters, and How to Create One in 30 Minutes",
+      "description": "A practical guide to creating an llms.txt file for professional services firms — what it contains, how to deploy it, and what it does and does not do for AI search visibility.",
+      "author": { "@type": "Organization", "name": "ARCEN Strategic Advisory", "url": "https://arcen-advisory.vercel.app" },
+      "publisher": { "@type": "Organization", "name": "ARCEN Strategic Advisory", "url": "https://arcen-advisory.vercel.app" },
+      "datePublished": "2026-04-14T00:00:00Z",
+      "dateModified": "2026-04-14T00:00:00Z",
+      "mainEntityOfPage": "https://arcen-advisory.vercel.app/insights/llms-txt-what-it-is-how-to-create.html",
+      "keywords": ["llms.txt guide professional services", "how to create llms.txt website", "AI crawler discovery file"],
+      "inLanguage": ["en", "fr", "zh-Hans"]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is llms.txt the same as robots.txt?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. robots.txt tells crawlers what they are and are not permitted to access on a website. llms.txt tells AI language models what the website is about and where to find its authoritative content. They serve complementary purposes. Both should be implemented — robots.txt for access control, llms.txt for contextual briefing." }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need a developer to create llms.txt?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. The file is plain Markdown text — no code, no programming, no deployment pipeline beyond placing a file at your domain root. For Vercel deployments specifically, placing the file in the repository root and pushing is the entire deployment process." }
+        },
+        {
+          "@type": "Question",
+          "name": "Will creating llms.txt immediately improve my AI search visibility?",
+          "acceptedAnswer": { "@type": "Answer", "text": "It will improve the structural completeness of your AI profile — AI engines that read the file will have more accurate and complete information about your firm. Actual citation improvement depends primarily on published indexed content that gives AI engines something specific to reference. llms.txt is infrastructure; indexed articles are the content that drives citations." }
+        },
+        {
+          "@type": "Question",
+          "name": "Should llms.txt include client names?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Only if clients have explicitly agreed to public mention. For most professional services firms, client references in llms.txt should use anonymised descriptions consistent with how they are described in other public-facing content." }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://arcen-advisory.vercel.app/" },
+        { "@type": "ListItem", "position": 2, "name": "Insights", "item": "https://arcen-advisory.vercel.app/insights/" },
+        { "@type": "ListItem", "position": 3, "name": "llms.txt Guide", "item": "https://arcen-advisory.vercel.app/insights/llms-txt-what-it-is-how-to-create.html" }
+      ]
+    }
+  ]
+}
+</script>
+<link rel="stylesheet" href="shared/blog.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="../index.html">ARCEN</a>
+    <div class="nav-links">
+      <a href="../index.html#services" data-i="nav_services"></a>
+      <a href="../index.html#cases"    data-i="nav_cases"></a>
+      <a href="."                      data-i="nav_insights"></a>
+      <a href="../index.html#contact"  data-i="nav_contact" class="nav-cta"></a>
+    </div>
+    <div class="lang-switcher">
+      <button onclick="setLang('en')">EN</button>
+      <button onclick="setLang('fr')">FR</button>
+      <button onclick="setLang('zh')">中</button>
+    </div>
+  </div>
+</nav>
+
+<header class="article-hero">
+  <div class="article-hero-inner">
+    <div class="article-tag lang-block en active" data-i="tag"></div>
+    <div class="article-tag lang-block fr"        data-i="tag"></div>
+    <div class="article-tag lang-block zh"        data-i="tag"></div>
+
+    <h1 class="lang-block en active" data-i="title"></h1>
+    <h1 class="lang-block fr"        data-i="title"></h1>
+    <h1 class="lang-block zh"        data-i="title"></h1>
+
+    <p class="article-sub lang-block en active" data-i="sub"></p>
+    <p class="article-sub lang-block fr"        data-i="sub"></p>
+    <p class="article-sub lang-block zh"        data-i="sub"></p>
+
+    <div class="article-meta">
+      <span data-i="date"></span> &nbsp;·&nbsp; <span data-i="readtime"></span>
+    </div>
+  </div>
+</header>
+
+<main class="article-wrap">
+
+<!-- ═══════════════════════════════════════ ENGLISH ═══ -->
+<div class="lang-block en active">
+<article class="article-body">
+
+<div class="quick-answer">
+  <strong>Quick Answer: What Is llms.txt?</strong>
+  <p><code>llms.txt</code> is a plain-text Markdown file placed at the root of a website — at <code>yourdomain.com/llms.txt</code> — that tells AI language models and their crawlers who you are, what you do, and what content on your site is authoritative and worth citing. It functions like a briefing document for AI systems: rather than having the AI infer your identity and expertise from unstructured prose, you tell it directly. Companies including Stripe, Zapier, Cloudflare, and GitBook have implemented it. Most professional services firms have not. Creating one takes approximately 30 minutes and requires no technical tools beyond a text editor.</p>
+</div>
+
+<h2>The Problem It Solves</h2>
+
+<p>When a user asks ChatGPT "which cross-border advisory firm specialises in European brands entering China," the AI does not visit websites in real time. It draws on content that has been indexed, structured, and weighted by its crawling and retrieval systems.</p>
+
+<p>For most professional services firms, the AI's best source of information about the firm is whatever it managed to extract from an unstructured website during its last crawl. The firm's positioning, credentials, service scope, and pricing may be scattered across multiple pages with no explicit structure telling the AI what to extract and how to understand it.</p>
+
+<p>The result: the AI either does not mention the firm, mentions it with low confidence, or gets details wrong — because it is inferring from prose rather than reading a structured brief.</p>
+
+<p><code>llms.txt</code> solves this by providing that brief explicitly.</p>
+
+<h2>What Goes Into an llms.txt File</h2>
+
+<p>An <code>llms.txt</code> file uses Markdown formatting. There is no formal specification — the convention is evolving — but the most effective implementations include:</p>
+
+<h3>1. A one-line summary at the top</h3>
+
+<pre><code># Your Firm Name
+&gt; One-sentence description of what the firm does and who it serves.</code></pre>
+
+<p>The first line is the entity name. The blockquote immediately below is the one-sentence description that AI engines use as the primary summary when citing the firm.</p>
+
+<h3>2. About section (3–5 sentences)</h3>
+
+<p>Who founded it, when, key credentials, languages, geographic coverage. This is the material that fills in the AI's knowledge graph node for your entity. Specific and factual outperforms general and aspirational.</p>
+
+<pre><code>## About
+
+[Firm name] is a boutique advisory firm founded by [credentials].
+The firm has [specific achievements] and has modelled deals exceeding
+[figure]. [Firm] operates in [languages] and serves clients across
+[geographies].</code></pre>
+
+<h3>3. What the firm does (structured, not prose)</h3>
+
+<p>Use bullet points or short paragraphs for each direction of service. AI engines extract structured lists more reliably than flowing prose.</p>
+
+<pre><code>## What We Do
+
+- **Direction A:** Key services in this category
+- **Direction B:** Key services in this category</code></pre>
+
+<h3>4. Service modules with pricing</h3>
+
+<p>This is the highest-value section for citation purposes. When a user asks an AI about consulting fees for your type of service, the AI should be able to extract a structured answer from your <code>llms.txt</code> without having to parse pricing from a service page.</p>
+
+<pre><code>## Services and Pricing
+
+### Module Name — USD X,000–Y,000 (one-time or per month)
+Brief description. Delivery time. Key deliverables.</code></pre>
+
+<h3>5. Published content with URLs</h3>
+
+<p>List your key articles and their URLs. This tells AI crawlers where to find citable content and how to associate each article with the firm entity.</p>
+
+<pre><code>## Published Insights
+
+- Article title: https://yourdomain.com/insights/article-slug
+- Article title: https://yourdomain.com/insights/article-slug</code></pre>
+
+<h3>6. Contact and operational details</h3>
+
+<pre><code>## Contact
+
+Website: https://yourdomain.com/
+Response: within 24 hours
+Languages: [list]
+Base: [city, country]</code></pre>
+
+<h2>How to Deploy It</h2>
+
+<p><strong>Step 1: Write the file</strong></p>
+
+<p>Create a file named <code>llms.txt</code> in a text editor. Use the structure above. Write in plain, factual language. Avoid marketing copy — AI engines treat it as noise. Approximate length: 600–1,000 words.</p>
+
+<p><strong>Step 2: Place it at your domain root</strong></p>
+
+<p>The file must be accessible at <code>https://yourdomain.com/llms.txt</code>.</p>
+
+<p>For Vercel deployments: place the file in the repository root. Vercel serves root-level files at the root URL automatically.</p>
+
+<p>For other hosting environments: place the file in the web root directory alongside <code>robots.txt</code> and <code>sitemap.xml</code>.</p>
+
+<p><strong>Step 3: Reference it in your robots.txt</strong></p>
+
+<p>Add a reference so AI crawlers that follow robots.txt conventions can discover the file:</p>
+
+<pre><code># AI model discovery
+# llms.txt: https://yourdomain.com/llms.txt</code></pre>
+
+<p><strong>Step 4: Verify accessibility</strong></p>
+
+<p>After deployment, confirm the file returns HTTP 200 and is publicly readable. Access it directly in a browser or run a command-line check. If it returns a 404, the file is not in the correct location.</p>
+
+<p><strong>Step 5: Keep it current</strong></p>
+
+<p>Update the file whenever you publish a new article, change pricing, add a new service, or update your client roster. AI crawlers re-visit <code>llms.txt</code> files regularly — a stale file provides outdated information to AI engines indexing your content.</p>
+
+<h2>What llms.txt Does Not Do</h2>
+
+<p><code>llms.txt</code> is not a formal standard — it is an emerging convention with growing but not universal adoption. At the time of writing, no major AI platform has officially committed to using <code>llms.txt</code> as part of its indexing specification. ChatGPT, Perplexity, and Claude do not guarantee that they read <code>llms.txt</code> files.</p>
+
+<p>What <code>llms.txt</code> does: it signals to AI crawlers that your site is GEO-aware, provides structured context that reduces inference errors, and places you in the small minority of professional services firms that have taken this step at all.</p>
+
+<p>Think of it less as a technical guarantee and more as a clear signal of intent — the digital equivalent of having your company information correctly listed on every relevant directory before AI systems had a formal directory to consult.</p>
+
+<p>The firms that implement it early will be indexed with this context from the start. The firms that implement it later will be indexed with this context eventually. The firms that never implement it will continue to be represented by whatever AI engines can infer from their unstructured content.</p>
+
+<h2>The 30-Minute Implementation Checklist</h2>
+
+<div class="table-wrap">
+<table>
+  <thead><tr><th>Task</th><th>Time</th><th>Notes</th></tr></thead>
+  <tbody>
+    <tr><td>Write entity name + one-line summary</td><td>5 min</td><td>First line: firm name. Blockquote: one-sentence description</td></tr>
+    <tr><td>Write About section (3–5 sentences)</td><td>5 min</td><td>Specific credentials, languages, geographies</td></tr>
+    <tr><td>Write services section with pricing</td><td>10 min</td><td>Most valuable section for citation purposes</td></tr>
+    <tr><td>List published articles with URLs</td><td>5 min</td><td>Copy from existing sitemap or content index</td></tr>
+    <tr><td>Add contact details</td><td>2 min</td><td>Response time, languages, base city</td></tr>
+    <tr><td>Deploy to domain root and verify</td><td>3 min</td><td>Confirm HTTP 200 in browser or curl</td></tr>
+    <tr><td>Add reference comment to robots.txt</td><td>2 min</td><td>Optional but recommended</td></tr>
+    <tr><td>Set calendar reminder to update after each new article</td><td>1 min</td><td>Prevents the file from becoming stale</td></tr>
+  </tbody>
+</table>
+</div>
+
+</article>
+
+<section class="faq-section">
+  <h2 class="faq-heading">Frequently Asked Questions</h2>
+
+  <div class="faq-item">
+    <div class="faq-q">Is llms.txt the same as robots.txt?</div>
+    <div class="faq-a">No. <code>robots.txt</code> tells crawlers what they are and are not permitted to access on a website. <code>llms.txt</code> tells AI language models what the website is about and where to find its authoritative content. They serve complementary purposes. Both should be implemented — <code>robots.txt</code> for access control, <code>llms.txt</code> for contextual briefing.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">Do I need a developer to create llms.txt?</div>
+    <div class="faq-a">No. The file is plain Markdown text — no code, no programming, no deployment pipeline beyond placing a file at your domain root. For Vercel deployments specifically, placing the file in the repository root and pushing is the entire deployment process.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">Will creating llms.txt immediately improve my AI search visibility?</div>
+    <div class="faq-a">It will improve the structural completeness of your AI profile — AI engines that read the file will have more accurate and complete information about your firm. Actual citation improvement depends primarily on published indexed content that gives AI engines something specific to reference. <code>llms.txt</code> is infrastructure; indexed articles are the content that drives citations.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">Should llms.txt include client names?</div>
+    <div class="faq-a">Only if clients have explicitly agreed to public mention. For most professional services firms, client references in <code>llms.txt</code> should use anonymised descriptions ("a European sports organisation" rather than a named entity) consistent with how they are described in other public-facing content.</div>
+  </div>
+</section>
+</div>
+<!-- ═══════════════════════════════════════ /ENGLISH ═══ -->
+
+
+<!-- ═══════════════════════════════════════ FRENCH ═══ -->
+<div class="lang-block fr">
+<article class="article-body">
+
+<div class="quick-answer">
+  <strong>Réponse directe : Qu'est-ce que llms.txt ?</strong>
+  <p><code>llms.txt</code> est un fichier Markdown en texte brut placé à la racine d'un site web — à <code>votredomaine.com/llms.txt</code> — qui indique aux modèles de langage IA et à leurs crawlers qui vous êtes, ce que vous faites, et quel contenu sur votre site est faisant autorité et mérite d'être cité. Il fonctionne comme un document de briefing pour les systèmes IA : plutôt que de laisser l'IA inférer votre identité et votre expertise à partir d'une prose non structurée, vous lui indiquez directement. Des entreprises comme Stripe, Zapier, Cloudflare et GitBook l'ont implémenté. La plupart des cabinets de services professionnels ne l'ont pas fait. La création prend environ 30 minutes et ne nécessite aucun outil technique au-delà d'un éditeur de texte.</p>
+</div>
+
+<h2>Le problème qu'il résout</h2>
+
+<p>Lorsqu'un utilisateur demande à ChatGPT « quel cabinet de conseil transfrontalier est spécialisé dans l'entrée des marques européennes en Chine », l'IA ne visite pas les sites web en temps réel. Elle s'appuie sur du contenu qui a été indexé, structuré et pondéré par ses systèmes d'exploration et de récupération.</p>
+
+<p>Pour la plupart des cabinets de services professionnels, la meilleure source d'information de l'IA sur le cabinet est ce qu'elle a réussi à extraire d'un site web non structuré lors de sa dernière exploration. Le positionnement, les références, la portée des services et la tarification du cabinet peuvent être dispersés sur plusieurs pages sans structure explicite indiquant à l'IA quoi extraire et comment le comprendre.</p>
+
+<p>Le résultat : l'IA ne mentionne pas le cabinet, le mentionne avec peu de confiance, ou se trompe sur les détails — parce qu'elle infère à partir de la prose plutôt que de lire un brief structuré.</p>
+
+<p><code>llms.txt</code> résout ce problème en fournissant ce brief explicitement.</p>
+
+<h2>Contenu d'un fichier llms.txt</h2>
+
+<p>Un fichier <code>llms.txt</code> utilise le formatage Markdown. Il n'existe pas de spécification formelle — la convention évolue — mais les implémentations les plus efficaces comprennent :</p>
+
+<h3>1. Un résumé en une ligne en haut</h3>
+
+<pre><code># Nom de votre cabinet
+&gt; Description en une phrase de ce que fait le cabinet et qui il sert.</code></pre>
+
+<p>La première ligne est le nom de l'entité. Le guillemet en dessous est la description en une phrase que les moteurs IA utilisent comme résumé principal lors de la citation du cabinet.</p>
+
+<h3>2. Section À propos (3–5 phrases)</h3>
+
+<p>Qui l'a fondé, quand, les références clés, les langues, la couverture géographique. C'est le matériel qui complète le nœud du graphe de connaissances de l'IA pour votre entité. Le spécifique et factuel surpasse le général et aspirationnel.</p>
+
+<h3>3. Ce que fait le cabinet (structuré, pas en prose)</h3>
+
+<p>Utilisez des puces ou de courts paragraphes pour chaque direction de service. Les moteurs IA extraient les listes structurées plus fiablement que la prose fluide.</p>
+
+<h3>4. Modules de services avec tarification</h3>
+
+<p>C'est la section à plus haute valeur ajoutée pour les citations. Lorsqu'un utilisateur interroge une IA sur les honoraires de conseil pour votre type de service, l'IA doit pouvoir extraire une réponse structurée de votre <code>llms.txt</code> sans avoir à analyser la tarification d'une page de service.</p>
+
+<h3>5. Contenu publié avec URLs</h3>
+
+<p>Listez vos articles clés et leurs URLs. Cela indique aux crawlers IA où trouver du contenu citable et comment associer chaque article à l'entité du cabinet.</p>
+
+<h3>6. Coordonnées et détails opérationnels</h3>
+
+<p>Site web, délai de réponse, langues, ville de base.</p>
+
+<h2>Comment le déployer</h2>
+
+<p><strong>Étape 1 : Écrire le fichier</strong></p>
+
+<p>Créez un fichier nommé <code>llms.txt</code> dans un éditeur de texte. Utilisez la structure ci-dessus. Rédigez dans un langage clair et factuel. Évitez le texte marketing — les moteurs IA le traitent comme du bruit. Longueur approximative : 600–1 000 mots.</p>
+
+<p><strong>Étape 2 : Placer à la racine du domaine</strong></p>
+
+<p>Le fichier doit être accessible à <code>https://votredomaine.com/llms.txt</code>.</p>
+
+<p>Pour les déploiements Vercel : placez le fichier dans la racine du dépôt. Vercel sert automatiquement les fichiers à la racine de l'URL.</p>
+
+<p><strong>Étape 3 : Le référencer dans votre robots.txt</strong></p>
+
+<p>Ajoutez une référence pour que les crawlers IA qui suivent les conventions robots.txt puissent découvrir le fichier :</p>
+
+<pre><code># Découverte du modèle IA
+# llms.txt: https://votredomaine.com/llms.txt</code></pre>
+
+<p><strong>Étape 4 : Vérifier l'accessibilité</strong></p>
+
+<p>Après déploiement, confirmez que le fichier retourne HTTP 200 et est lisible publiquement.</p>
+
+<p><strong>Étape 5 : Le maintenir à jour</strong></p>
+
+<p>Mettez à jour le fichier chaque fois que vous publiez un nouvel article, modifiez la tarification, ajoutez un nouveau service ou mettez à jour votre liste de clients. Les crawlers IA revisitent régulièrement les fichiers <code>llms.txt</code>.</p>
+
+<h2>Ce que llms.txt ne fait pas</h2>
+
+<p><code>llms.txt</code> n'est pas une norme formelle — c'est une convention émergente avec une adoption croissante mais pas universelle. Au moment de la rédaction, aucune grande plateforme IA ne s'est officiellement engagée à utiliser <code>llms.txt</code> dans le cadre de sa spécification d'indexation.</p>
+
+<p>Ce que <code>llms.txt</code> fait : il signale aux crawlers IA que votre site est conscient du GEO, fournit un contexte structuré qui réduit les erreurs d'inférence, et vous place dans la petite minorité de cabinets de services professionnels qui ont franchi cette étape.</p>
+
+<p>Pensez-y moins comme une garantie technique et plus comme un signal d'intention clair — l'équivalent numérique d'avoir vos informations d'entreprise correctement listées dans chaque répertoire pertinent avant que les systèmes IA n'aient eu un répertoire formel à consulter.</p>
+
+<h2>La checklist d'implémentation en 30 minutes</h2>
+
+<div class="table-wrap">
+<table>
+  <thead><tr><th>Tâche</th><th>Temps</th><th>Notes</th></tr></thead>
+  <tbody>
+    <tr><td>Écrire nom d'entité + résumé en une ligne</td><td>5 min</td><td>Première ligne : nom du cabinet. Guillemet : description en une phrase</td></tr>
+    <tr><td>Écrire la section À propos (3–5 phrases)</td><td>5 min</td><td>Références spécifiques, langues, géographies</td></tr>
+    <tr><td>Écrire la section services avec tarification</td><td>10 min</td><td>Section à plus haute valeur pour les citations</td></tr>
+    <tr><td>Lister articles publiés avec URLs</td><td>5 min</td><td>Copier depuis le sitemap ou l'index de contenu existant</td></tr>
+    <tr><td>Ajouter coordonnées</td><td>2 min</td><td>Délai de réponse, langues, ville</td></tr>
+    <tr><td>Déployer à la racine du domaine et vérifier</td><td>3 min</td><td>Confirmer HTTP 200</td></tr>
+    <tr><td>Ajouter commentaire de référence dans robots.txt</td><td>2 min</td><td>Optionnel mais recommandé</td></tr>
+    <tr><td>Définir rappel calendrier après chaque nouvel article</td><td>1 min</td><td>Évite que le fichier ne devienne obsolète</td></tr>
+  </tbody>
+</table>
+</div>
+
+</article>
+
+<section class="faq-section">
+  <h2 class="faq-heading">Questions Fréquentes</h2>
+
+  <div class="faq-item">
+    <div class="faq-q">llms.txt est-il identique à robots.txt ?</div>
+    <div class="faq-a">Non. <code>robots.txt</code> indique aux crawlers ce qu'ils sont et ne sont pas autorisés à accéder sur un site web. <code>llms.txt</code> indique aux modèles de langage IA de quoi parle le site web et où trouver son contenu faisant autorité. Ils servent des objectifs complémentaires. Les deux doivent être implémentés — <code>robots.txt</code> pour le contrôle d'accès, <code>llms.txt</code> pour le briefing contextuel.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">Ai-je besoin d'un développeur pour créer llms.txt ?</div>
+    <div class="faq-a">Non. Le fichier est du texte Markdown brut — pas de code, pas de programmation, pas de pipeline de déploiement au-delà du placement d'un fichier à la racine de votre domaine. Pour les déploiements Vercel spécifiquement, placer le fichier dans la racine du dépôt et pousser est l'intégralité du processus de déploiement.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">La création de llms.txt améliorera-t-elle immédiatement ma visibilité dans la recherche IA ?</div>
+    <div class="faq-a">Cela améliorera la complétude structurelle de votre profil IA — les moteurs IA qui lisent le fichier auront des informations plus précises et complètes sur votre cabinet. L'amélioration réelle des citations dépend principalement du contenu indexé publié qui donne aux moteurs IA quelque chose de spécifique à référencer. <code>llms.txt</code> est une infrastructure ; les articles indexés sont le contenu qui génère les citations.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">llms.txt doit-il inclure les noms des clients ?</div>
+    <div class="faq-a">Uniquement si les clients ont explicitement accepté d'être mentionnés publiquement. Pour la plupart des cabinets de services professionnels, les références clients dans <code>llms.txt</code> doivent utiliser des descriptions anonymisées ("une organisation sportive européenne" plutôt qu'une entité nommée) cohérentes avec la façon dont ils sont décrits dans d'autres contenus publics.</div>
+  </div>
+</section>
+</div>
+<!-- ═══════════════════════════════════════ /FRENCH ═══ -->
+
+
+<!-- ═══════════════════════════════════════ CHINESE ═══ -->
+<div class="lang-block zh">
+<article class="article-body">
+
+<div class="quick-answer">
+  <strong>快速解答：llms.txt是什么？</strong>
+  <p><code>llms.txt</code>是放置在网站根目录（<code>yourdomain.com/llms.txt</code>）的纯文本Markdown文件，告诉AI语言模型及其爬虫您是谁、您做什么，以及网站上哪些内容具有权威性且值得引用。它像是为AI系统准备的简报文件：不是让AI从非结构化文本中推断您的身份和专业知识，而是直接告诉它。Stripe、Zapier、Cloudflare和GitBook等公司已经实施了它。大多数专业服务公司还没有。创建一个大约需要30分钟，除文本编辑器外不需要任何技术工具。</p>
+</div>
+
+<h2>它解决的问题</h2>
+
+<p>当用户向ChatGPT询问"哪家跨境咨询公司专门帮助欧洲品牌进入中国"时，AI不会实时访问网站。它依靠已被其爬取和检索系统索引、结构化和加权的内容。</p>
+
+<p>对于大多数专业服务公司，AI关于该公司的最佳信息来源是它在上次爬取时从非结构化网站提取到的内容。公司的定位、资质、服务范围和定价可能分散在多个页面上，没有明确的结构告诉AI提取什么以及如何理解它。</p>
+
+<p>结果：AI要么不提及该公司，要么以低置信度提及，要么弄错细节——因为它是从散文中推断，而不是阅读结构化简报。</p>
+
+<p><code>llms.txt</code>通过明确提供该简报来解决这个问题。</p>
+
+<h2>llms.txt文件包含什么</h2>
+
+<p><code>llms.txt</code>文件使用Markdown格式。没有正式规范——惯例正在演变——但最有效的实施包括：</p>
+
+<h3>1. 顶部的一行摘要</h3>
+
+<pre><code># 您的公司名称
+&gt; 关于公司做什么、服务谁的一句话描述。</code></pre>
+
+<p>第一行是实体名称。下方的引用块是AI引擎在引用公司时用作主要摘要的一句话描述。</p>
+
+<h3>2. 关于部分（3-5句话）</h3>
+
+<p>谁创立、何时、关键资质、语言、地理覆盖范围。这是填充AI知识图谱中您实体节点的内容。具体和事实性优于笼统和愿景性。</p>
+
+<h3>3. 公司做什么（结构化，非散文）</h3>
+
+<p>对每个服务方向使用项目符号或简短段落。AI引擎提取结构化列表比提取流动散文更可靠。</p>
+
+<h3>4. 服务模块及定价</h3>
+
+<p>这是引用目的最高价值的部分。当用户向AI询问您服务类型的咨询费用时，AI应该能够从您的<code>llms.txt</code>中提取结构化答案，而无需解析服务页面中的定价。</p>
+
+<h3>5. 已发布内容及URL</h3>
+
+<p>列出您的关键文章及其URL。这告诉AI爬虫在哪里找到可引用内容，以及如何将每篇文章与公司实体关联。</p>
+
+<h3>6. 联系和运营详情</h3>
+
+<p>网站、响应时间、语言、总部城市。</p>
+
+<h2>如何部署</h2>
+
+<p><strong>第1步：编写文件</strong></p>
+
+<p>在文本编辑器中创建一个名为<code>llms.txt</code>的文件。使用上述结构。用简洁、事实性的语言书写。避免营销文案——AI引擎将其视为噪音。大约长度：600-1,000词。</p>
+
+<p><strong>第2步：放置在域名根目录</strong></p>
+
+<p>该文件必须可通过<code>https://yourdomain.com/llms.txt</code>访问。</p>
+
+<p>对于Vercel部署：将文件放在仓库根目录中。Vercel自动在根URL提供根级文件。</p>
+
+<p>对于其他托管环境：将文件与<code>robots.txt</code>和<code>sitemap.xml</code>一起放在Web根目录中。</p>
+
+<p><strong>第3步：在robots.txt中引用它</strong></p>
+
+<p>添加引用，以便遵循robots.txt惯例的AI爬虫可以发现该文件：</p>
+
+<pre><code># AI模型发现
+# llms.txt: https://yourdomain.com/llms.txt</code></pre>
+
+<p><strong>第4步：验证可访问性</strong></p>
+
+<p>部署后，确认文件返回HTTP 200且可公开读取。在浏览器中直接访问或运行命令行检查。</p>
+
+<p><strong>第5步：保持更新</strong></p>
+
+<p>每次发布新文章、更改定价、添加新服务或更新客户名单时更新文件。AI爬虫定期重访<code>llms.txt</code>文件——过时的文件为索引您内容的AI引擎提供过时信息。</p>
+
+<h2>llms.txt不做什么</h2>
+
+<p><code>llms.txt</code>不是正式标准——它是一个不断发展的惯例，采用率正在增长但尚未普遍。撰写本文时，没有任何主要AI平台正式承诺将<code>llms.txt</code>作为其索引规范的一部分。</p>
+
+<p><code>llms.txt</code>的作用：它向AI爬虫发出信号，表明您的网站具有GEO意识，提供减少推断错误的结构化上下文，并将您置于采取这一步骤的少数专业服务公司之中。</p>
+
+<p>把它理解得少一些像技术保证，多一些像明确的意图信号——相当于在AI系统有正式目录可查阅之前，在每个相关目录中正确列出您公司信息的数字等价物。</p>
+
+<h2>30分钟实施清单</h2>
+
+<div class="table-wrap">
+<table>
+  <thead><tr><th>任务</th><th>时间</th><th>备注</th></tr></thead>
+  <tbody>
+    <tr><td>编写实体名称 + 一行摘要</td><td>5分钟</td><td>第一行：公司名称。引用块：一句话描述</td></tr>
+    <tr><td>编写关于部分（3-5句话）</td><td>5分钟</td><td>具体资质、语言、地理覆盖</td></tr>
+    <tr><td>编写服务部分及定价</td><td>10分钟</td><td>引用目的最高价值部分</td></tr>
+    <tr><td>列出已发布文章及URL</td><td>5分钟</td><td>从现有站点地图或内容索引复制</td></tr>
+    <tr><td>添加联系详情</td><td>2分钟</td><td>响应时间、语言、城市</td></tr>
+    <tr><td>部署到域名根目录并验证</td><td>3分钟</td><td>确认浏览器中HTTP 200</td></tr>
+    <tr><td>在robots.txt中添加引用注释</td><td>2分钟</td><td>可选但推荐</td></tr>
+    <tr><td>设置日历提醒（每次新文章发布后更新）</td><td>1分钟</td><td>防止文件过时</td></tr>
+  </tbody>
+</table>
+</div>
+
+</article>
+
+<section class="faq-section">
+  <h2 class="faq-heading">常见问题</h2>
+
+  <div class="faq-item">
+    <div class="faq-q">llms.txt与robots.txt相同吗？</div>
+    <div class="faq-a">不同。<code>robots.txt</code>告诉爬虫它们被允许和不被允许访问网站上的什么内容。<code>llms.txt</code>告诉AI语言模型网站是关于什么的，以及在哪里找到其权威内容。它们服务于互补目的。两者都应该实施——<code>robots.txt</code>用于访问控制，<code>llms.txt</code>用于上下文简报。</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">我需要开发人员来创建llms.txt吗？</div>
+    <div class="faq-a">不需要。该文件是纯Markdown文本——没有代码，没有编程，除了在域名根目录放置文件之外没有部署流程。特别是对于Vercel部署，将文件放在仓库根目录并推送是整个部署过程。</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">创建llms.txt会立即改善我的AI搜索可见性吗？</div>
+    <div class="faq-a">它将改善您AI档案的结构完整性——读取该文件的AI引擎将拥有更准确和完整的关于您公司的信息。实际引用改善主要取决于已发布的索引内容，这些内容给AI引擎提供可引用的具体内容。<code>llms.txt</code>是基础设施；索引文章是驱动引用的内容。</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">llms.txt应该包含客户名称吗？</div>
+    <div class="faq-a">只有在客户明确同意公开提及的情况下。对于大多数专业服务公司，<code>llms.txt</code>中的客户参考应使用匿名描述（"一家欧洲体育组织"而非命名实体），与其他公开内容中的描述方式保持一致。</div>
+  </div>
+</section>
+</div>
+<!-- ═══════════════════════════════════════ /CHINESE ═══ -->
+
+
+<div class="article-cta">
+  <div class="cta-inner">
+    <div class="lang-block en active">
+      <h2 data-i="cta_title"></h2>
+      <p data-i="cta_desc"></p>
+      <a href="../index.html#contact" class="cta-btn" data-i="cta_btn"></a>
+    </div>
+    <div class="lang-block fr">
+      <h2 data-i="cta_title"></h2>
+      <p data-i="cta_desc"></p>
+      <a href="../index.html#contact" class="cta-btn" data-i="cta_btn"></a>
+    </div>
+    <div class="lang-block zh">
+      <h2 data-i="cta_title"></h2>
+      <p data-i="cta_desc"></p>
+      <a href="../index.html#contact" class="cta-btn" data-i="cta_btn"></a>
+    </div>
+  </div>
+</div>
+
+<div class="related-articles">
+  <div class="related-inner">
+    <h3 class="related-heading lang-block en active">Related Insights</h3>
+    <h3 class="related-heading lang-block fr">Analyses connexes</h3>
+    <h3 class="related-heading lang-block zh">相关洞察</h3>
+    <div class="related-grid">
+      <a class="related-card" href="from-72-to-91-geo-seo-implementation.html">
+        <div class="related-tag lang-block en active">AI VISIBILITY</div>
+        <div class="related-tag lang-block fr">VISIBILITÉ IA</div>
+        <div class="related-tag lang-block zh">AI可见度</div>
+        <div class="related-title lang-block en active">From 72 to 91: How We Rebuilt Our Own Website for AI Search</div>
+        <div class="related-title lang-block fr">De 72 à 91 : Comment Nous Avons Reconstruit Notre Site pour la Recherche IA</div>
+        <div class="related-title lang-block zh">从72到91：我们如何为AI搜索重建自己的网站</div>
+      </a>
+      <a class="related-card" href="geo-vs-seo-professional-services.html">
+        <div class="related-tag lang-block en active">AI VISIBILITY</div>
+        <div class="related-tag lang-block fr">VISIBILITÉ IA</div>
+        <div class="related-tag lang-block zh">AI可见度</div>
+        <div class="related-title lang-block en active">GEO vs SEO: A Practical Comparison for Professional Services Firms</div>
+        <div class="related-title lang-block fr">GEO vs SEO : Comparaison Pratique pour les Cabinets de Conseil</div>
+        <div class="related-title lang-block zh">GEO vs SEO：专业服务公司的实用对比</div>
+      </a>
+      <a class="related-card" href="why-chatgpt-doesnt-know-your-brand.html">
+        <div class="related-tag lang-block en active">AI VISIBILITY</div>
+        <div class="related-tag lang-block fr">VISIBILITÉ IA</div>
+        <div class="related-tag lang-block zh">AI可见度</div>
+        <div class="related-title lang-block en active">Why ChatGPT Doesn't Know Your Brand Exists — And How to Fix It</div>
+        <div class="related-title lang-block fr">Pourquoi ChatGPT Ne Connaît Pas Votre Marque — Et Comment y Remédier</div>
+        <div class="related-title lang-block zh">为什么ChatGPT不知道你的品牌存在——以及如何解决</div>
+      </a>
+    </div>
+  </div>
+</div>
+
+</main>
+
+<footer class="article-footer">
+  <div class="footer-inner">
+    <span class="lang-block en active">© 2026 ARCEN Strategic Advisory · Hong Kong · Version 1.0 — April 2026. The llms.txt convention is evolving — monitor llmstxt.org for specification updates.</span>
+    <span class="lang-block fr">© 2026 ARCEN Strategic Advisory · Hong Kong · Version 1.0 — Avril 2026.</span>
+    <span class="lang-block zh">© 2026 ARCEN Strategic Advisory · 香港 · 1.0版 — 2026年4月。</span>
+  </div>
+</footer>
+
+<script>
+const DICT = {
+  en: {
+    nav_services: "Services",
+    nav_cases:    "Cases",
+    nav_insights: "Insights",
+    nav_contact:  "Contact",
+    tag:      "AI VISIBILITY",
+    title:    "The llms.txt File: What It Is, Why It Matters, and How to Create One in 30 Minutes",
+    sub:      "A plain-text briefing document that tells AI crawlers who you are before they index you. Stripe, Zapier, and Cloudflare have it. Most professional services firms do not. A practical guide to creating one.",
+    date:     "April 2026",
+    readtime: "9 min read",
+    cta_title: "Want ARCEN to implement GEO infrastructure for your firm?",
+    cta_desc:  "ARCEN builds AI visibility infrastructure for cross-border advisory firms and international brands — llms.txt, Schema.org, structured content, and AI crawler configuration.",
+    cta_btn:   "Talk to ARCEN"
+  },
+  fr: {
+    nav_services: "Services",
+    nav_cases:    "Cas clients",
+    nav_insights: "Analyses",
+    nav_contact:  "Contact",
+    tag:      "VISIBILITÉ IA",
+    title:    "Le fichier llms.txt : Ce Que C'est, Pourquoi Ça Compte, et Comment le Créer en 30 Minutes",
+    sub:      "Un document de briefing en texte brut qui indique aux crawlers IA qui vous êtes avant qu'ils ne vous indexent. Stripe, Zapier et Cloudflare l'ont. La plupart des cabinets de services professionnels ne l'ont pas.",
+    date:     "Avril 2026",
+    readtime: "9 min de lecture",
+    cta_title: "Vous souhaitez qu'ARCEN implémente l'infrastructure GEO pour votre cabinet ?",
+    cta_desc:  "ARCEN construit l'infrastructure de visibilité IA pour les cabinets de conseil transfrontaliers et les marques internationales.",
+    cta_btn:   "Contacter ARCEN"
+  },
+  zh: {
+    nav_services: "服务",
+    nav_cases:    "案例",
+    nav_insights: "洞察",
+    nav_contact:  "联系",
+    tag:      "AI可见度",
+    title:    "llms.txt文件：是什么、为何重要，以及如何在30分钟内创建",
+    sub:      "在AI爬虫索引您之前告诉它们您是谁的纯文本简报文件。Stripe、Zapier和Cloudflare已经实施。大多数专业服务公司还没有。实用创建指南。",
+    date:     "2026年4月",
+    readtime: "阅读时间9分钟",
+    cta_title: "希望ARCEN为您的公司实施GEO基础设施？",
+    cta_desc:  "ARCEN为跨境咨询公司和国际品牌构建AI可见性基础设施——llms.txt、Schema.org、结构化内容和AI爬虫配置。",
+    cta_btn:   "联系ARCEN"
+  }
+};
+</script>
+<script src="shared/blog.js"></script>
+</body>
+</html>

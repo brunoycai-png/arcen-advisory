@@ -52,6 +52,9 @@ ARCEN has conducted detailed analysis of all major Chinese social media and e-co
 - Why One Platform Is Never Enough in China — And What to Do About It: https://arcen-advisory.vercel.app/insights/china-social-media-single-platform-mistake.html
 - Why ChatGPT Doesn't Know Your Brand Exists — And How to Fix It: https://arcen-advisory.vercel.app/insights/why-chatgpt-doesnt-know-your-brand.html
 - Five Structural Mistakes European Brands Make When Entering China: https://arcen-advisory.vercel.app/insights/five-structural-mistakes-european-brands-china.html
+- From 72 to 91: How We Rebuilt Our Own Website for AI Search: https://arcen-advisory.vercel.app/insights/from-72-to-91-geo-seo-implementation.html
+- GEO vs SEO: A Practical Comparison for Professional Services Firms: https://arcen-advisory.vercel.app/insights/geo-vs-seo-professional-services.html
+- The llms.txt File: What It Is, Why It Matters, and How to Create One in 30 Minutes: https://arcen-advisory.vercel.app/insights/llms-txt-what-it-is-how-to-create.html
 - All Insights: https://arcen-advisory.vercel.app/insights/
 
 ## Selected Client Work
