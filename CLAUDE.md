@@ -60,12 +60,17 @@
 | `index.html` | 主站，所有 CSS + JS 内联 |
 | `index-preview.html` | 沙盒：大改前先在这里测试 |
 | `vercel.json` | 安全 headers (CSP 已含 cdn.jsdelivr.net) |
-| `sitemap.xml` | 页面 URL（新文章用 add-article.js 更新） |
-| `llms.txt` | AI 爬虫识别文件 |
-| `robots.txt` | 爬虫规则 |
+| `sitemap.xml` | 页面 URL（新文章手动更新，16 URLs as of 2026-04-14） |
+| `llms.txt` | AI 爬虫识别文件（含全部14篇文章 URL） |
+| `robots.txt` | 爬虫规则（含 13 个 AI crawler 显式许可） |
+| `co-image.png` | og:image 社交分享图（1200×630） |
 | `scripts/add-article.js` | 新文章脚手架（更新 sitemap + llms.txt） |
-| `scripts/migrate-imgs.js` | base64 → Supabase Storage |
 | `.github/workflows/deploy.yml` | CI/CD — 需要设置 GitHub Secrets |
+| `insights/shared/blog.css` | 文章页共用样式（ARCEN 设计系统，含 nav/hero/body/cta/faq/related） |
+| `insights/shared/blog.js` | 共用 lang switcher（依赖页面内联 DICT） |
+| `insights/_template.html` | 新文章起点 — 复制 → 填内容 → 用 EN-first 工作流构建 |
+| `insights/SLUG.html` | 每篇文章页 — head + @graph schema + DICT + lang-block 内容 |
+| `insights/index.html` | 文章列表页（14篇，分类筛选，三语言） |
 
 ---
 
@@ -85,6 +90,126 @@
 - [x] Google Search Console 验证 ✅ + sitemap 已提交
 - [x] Bing Webmaster Tools 验证 ✅ + IndexNow key `4a9bd857b68d418e8d86799b7b897fc8` ✅
 - [x] `add-article.js` BASE_URL 已设置
+
+---
+
+## [RULE] localStorage 双 key 同步
+
+homepage (`index.html`) 的 `switchLang()` 必须同时写两个 key：
+```javascript
+localStorage.setItem('ag_lang', lang);    // homepage 自用
+localStorage.setItem('arcen_lang', lang); // 文章页 blog.js 读取
+```
+`blog.js` 只读 `arcen_lang`。两个 key 不同步 → 文章页显示上次访问的语言，与 homepage 当前语言不符。**不要只改其中一个。**
+
+---
+
+## [RULE] Carousel translateX 用 px 不用 %
+
+```javascript
+// ✅ 正确 — px based on container width
+var slideW = track.parentElement.offsetWidth;
+track.style.transform = 'translateX(-' + (page * slideW) + 'px)';
+
+// ❌ 错误 — % 是相对 track 自身宽度，多 slide 时会 overshoort
+track.style.transform = 'translateX(-' + (page * 100) + '%)';
+```
+track 宽度 = N slides × container width，所以 `-100%` = 移动了 N 个容器宽度。
+
+---
+
+## [RULE] 新文章发布 — 必须同步更新的 5 个文件
+
+每次新增文章，**必须**更新：
+
+1. `insights/index.html` — 加 article card（`data-cat`），更新文章计数
+2. `index.html` — 在 `#blog-track` 找当前最后一个 slide，如果 < 4 张就加入；如果满了加新 slide
+3. `sitemap.xml` — 加 `<url>` 条目（含 3 个 hreflang xhtml:link），`lastmod` 用当天日期
+4. `llms.txt` — 在 Published Insights 区块加标题 + URL
+5. `og:image` — 新文章 head 加 `<meta property="og:image" content="https://arcen-advisory.vercel.app/co-image.png">`
+
+---
+
+## [FACT] 文章分类（data-cat 值）
+
+| 分类 | 用途 |
+|------|------|
+| `MARKET ENTRY` | 市场准入、实体结构、合规 |
+| `PLATFORM GUIDE` | 平台操作指南（抖音/小红书/天猫/微信） |
+| `AI VISIBILITY` | GEO、llms.txt、Schema.org |
+| `FINANCE` | WFOE 成本、财务结构 |
+| `STRATEGY` | 宏观进入策略、多阶段规划 |
+
+---
+
+## [FACT] 当前文章列表（14篇，截至 2026-04-14）
+
+| Slug | 分类 | 读时 |
+|------|------|------|
+| china-social-media-registration-structures | MARKET ENTRY | 14m |
+| china-account-ownership-transfer-risk | MARKET ENTRY | 9m |
+| china-wfoe-subsidiary-cost-breakdown | FINANCE | 8m |
+| tmall-global-vs-wechat-mini-program | PLATFORM GUIDE | 9m |
+| three-phase-china-market-entry-strategy | STRATEGY | 9m |
+| xiaohongshu-european-brands-guide | PLATFORM GUIDE | 10m |
+| douyin-ecommerce-foreign-brands | PLATFORM GUIDE | 9m |
+| china-platform-ecosystem-2026 | PLATFORM GUIDE | 9m |
+| china-social-media-single-platform-mistake | MARKET ENTRY | 7m |
+| why-chatgpt-doesnt-know-your-brand | AI VISIBILITY | 12m |
+| five-structural-mistakes-european-brands-china | MARKET ENTRY | 9m |
+| from-72-to-91-geo-seo-implementation | AI VISIBILITY | 12m |
+| geo-vs-seo-professional-services | AI VISIBILITY | 10m |
+| llms-txt-what-it-is-how-to-create | AI VISIBILITY | 9m |
+
+---
+
+## [FLOW] 新文章 / 案例 — EN-first 工作流
+
+> 用户只提供英文内容，Claude 完成翻译 + 构建 + 更新。
+
+### 最小输入格式（用户每次提供）
+
+```
+TYPE: insight | case          ← insight = 行业洞察文章；case = 客户案例摘要（首页卡片）
+SLUG: your-article-slug       ← URL slug，小写连字符，如 china-entry-mistakes
+CATEGORY: Market Entry        ← 显示在 tag 上，英文即可，Claude 负责翻译
+TITLE: Full English title
+SUB: 1-2 sentence subtitle/deck
+DATE: April 2026
+READTIME: 8 min read
+
+BODY_EN:
+[完整英文正文，支持 ## 标题、段落、- 列表、> callout]
+
+FAQ_EN:
+Q: Question 1
+A: Answer 1
+Q: Question 2
+A: Answer 2
+Q: Question 3
+A: Answer 3
+
+CTA_TITLE_EN: Ready to make your move?
+CTA_DESC_EN: Whether you are entering China or going global, ARCEN builds the path.
+
+RELATED: slug1.html | slug2.html | slug3.html   ← 可选，没有就留空
+```
+
+### Claude 执行步骤（每次新文章自动完成）
+
+1. **翻译** — 将标题、副标题、正文、FAQ、CTA 翻译成 FR + ZH，保持原意不意译
+2. **构建文章页** — 从 `blog/_template.html` 复制 → 填入所有三语内容 → 保存为 `blog/SLUG.html`
+3. **更新首页** — 在 `index.html` INSIGHTS section（`<!-- INSIGHTS -->`）的轮播中加文章卡片（EN/FR/ZH 三组 `.blog-cat` / `.blog-t` / `.blog-d` / `.blog-m`）
+4. **更新 sitemap.xml** — 加 `<url>` 条目，`<lastmod>` 用当天日期
+5. **更新 llms.txt** — 在 Blog/Insights 区块加文章 URL + 一行英文摘要
+6. **Git push** — `git add -A && git commit -m "feat: add insight SLUG" && git push origin main`
+
+### 格式原则
+
+- 首页摘要（`.blog-d`）：1 句话，≤20 词，直接点出核心洞察
+- 首页状态（`.blog-m`）：文章上线前用 `Coming soon · X min read`，上线后去掉 "Coming soon"
+- FAQ：每篇 3 条，与 JSON-LD FAQPage schema 保持完全一致
+- 样式：严格遵循 `blog/shared/blog.css`，不内联自定义样式
 
 ---
 
