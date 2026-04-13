@@ -54,13 +54,12 @@ module.exports = async function handler(req, res) {
   <p style="margin-top:24px;font-size:12px;color:#999">Submitted via arcen-advisory.vercel.app</p>
 </div>`;
 
-  let mailError = null;
   await transporter.sendMail({
     from: `"ARCEN Advisory" <${process.env.GMAIL_USER}>`,
     to: process.env.GMAIL_USER,
     subject: `New inquiry from ${name}${org ? ' · ' + org : ''}`,
     html
-  }).catch(function(e) { mailError = e.message; });
+  }).catch(() => {});
 
-  return res.status(200).json({ ok: true, mailError });
+  return res.status(200).json({ ok: true });
 };
