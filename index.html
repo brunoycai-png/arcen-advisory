@@ -570,9 +570,11 @@ body.lang-fr .fr-inline { display: inline; }
 /* ── RESPONSIVE ── */
 @media (max-width: 760px) {
   .nav-r .nav-lnk { display: none; }
+  .nav-r .lang { display: none; }
   .nav-r .nav-ask-ai { font-size: 12px; padding: 6px 12px; gap: 4px; }
   .nav-r .nav-ask-ai-dot { display: none; }
   .nav-r .nav-cta { font-size: 12px; padding: 6px 12px; }
+  .mobile-lang { display: flex !important; gap: 6px; padding: 8px 20px; border-bottom: 1px solid var(--border); }
   .lang-b { font-size: 11px; padding: 3px 7px; }
   .hero-h { font-size: 28px; }
   .mod-grid { grid-template-columns: 1fr; }
@@ -617,6 +619,11 @@ body.lang-fr .fr-inline { display: inline; }
     <a class="nav-cta zh" href="#contact">联系我们</a>
   </div>
 </nav>
+<div class="mobile-lang" style="display:none">
+  <button class="lang-b on" data-lang="en" onclick="switchLang('en')">EN</button>
+  <button class="lang-b" data-lang="fr" onclick="switchLang('fr')">FR</button>
+  <button class="lang-b" data-lang="zh" onclick="switchLang('zh')">中文</button>
+</div>
 
 <!-- HERO -->
 <section class="hero">
