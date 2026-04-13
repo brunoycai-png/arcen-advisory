@@ -1393,10 +1393,6 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-// ── SUPABASE ──────────────────────────────────────────────────────────────────
-var SUPABASE_URL = 'https://lgcxehxrpnzvyjojukod.supabase.co';
-var SUPABASE_KEY = 'sb_publishable_xqjvFfsbHlT8A7CsdaEsMw_Q2asL6i8';
-
 // ── CONTACT FORM ──────────────────────────────────────────────────────────────
 function submitForm() {
   var name  = document.getElementById('f-name').value.trim();
@@ -1407,14 +1403,9 @@ function submitForm() {
   var lang  = localStorage.getItem('ag_lang') || 'en';
   if (!name || !email) return;
 
-  fetch(SUPABASE_URL + '/rest/v1/inquiries', {
+  fetch('/api/contact', {
     method: 'POST',
-    headers: {
-      'apikey': SUPABASE_KEY,
-      'Authorization': 'Bearer ' + SUPABASE_KEY,
-      'Content-Type': 'application/json',
-      'Prefer': 'return=minimal'
-    },
+    headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ name: name, email: email, org: org, type: type, message: msg, lang: lang })
   }).catch(function() {});
 
