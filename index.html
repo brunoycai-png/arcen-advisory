@@ -222,7 +222,7 @@ a { color: inherit; text-decoration: none; }
   margin-bottom: 3rem;
 }
 
-.stat { background: var(--bg2); padding: 1.5rem 1.5rem; }
+.stat { background: var(--bg2); padding: 1.5rem; }
 .stat-n {
   font-size: 26px;
   font-weight: 800;
@@ -1208,6 +1208,13 @@ body.lang-fr .fr-inline { display: inline; }
 <script>
 // ── LANG SWITCHER ─────────────────────────────────────────────────────────────
 // IMPORTANT: body class drives all .en / .fr / .zh visibility via CSS
+
+var PLACEHOLDERS = {
+  'f-name': { en: 'Name', fr: 'Nom', zh: '姓名' },
+  'f-org':  { en: 'Company / brand', fr: 'Entreprise / marque', zh: '公司 / 品牌' },
+  'f-msg':  { en: 'A few sentences about your situation...', fr: 'Quelques phrases sur votre situation...', zh: '简单描述一下你的情况...' }
+};
+
 function switchLang(lang) {
   localStorage.setItem('ag_lang', lang);
   document.body.className = document.body.className.replace(/\blang-\S+/g, '').trim();
@@ -1216,6 +1223,23 @@ function switchLang(lang) {
     b.classList.toggle('on', b.dataset.lang === lang);
   });
   document.documentElement.lang = lang;
+  // Fix <option> visibility — display:none on <option> is unreliable in Safari/Firefox
+  document.querySelectorAll('#f-type option').forEach(function(opt) {
+    var show = opt.classList.contains(lang);
+    opt.hidden = !show;
+    opt.disabled = !show;
+  });
+  var sel = document.getElementById('f-type');
+  if (sel) {
+    var first = Array.from(sel.options).find(function(o) { return !o.hidden; });
+    if (first) sel.value = first.value;
+  }
+  // Translate placeholders
+  Object.keys(PLACEHOLDERS).forEach(function(id) {
+    var el = document.getElementById(id);
+    var p = PLACEHOLDERS[id];
+    if (el) el.placeholder = p[lang] || p.en;
+  });
 }
 function cycleLang() {
   var order = ['en', 'fr', 'zh'];
@@ -1403,14 +1427,21 @@ function submitForm() {
   var lang  = localStorage.getItem('ag_lang') || 'en';
   if (!name || !email) return;
 
+  document.querySelectorAll('.sbtn').forEach(function(b) { b.disabled = true; });
+
   fetch('/api/contact', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ name: name, email: email, org: org, type: type, message: msg, lang: lang })
-  }).catch(function() {});
-
-  document.getElementById('form-wrap').style.display = 'none';
-  document.getElementById('form-success').style.display = 'block';
+  })
+  .then(function() {
+    document.getElementById('form-wrap').style.display = 'none';
+    document.getElementById('form-success').style.display = 'block';
+  })
+  .catch(function() {
+    document.getElementById('form-wrap').style.display = 'none';
+    document.getElementById('form-success').style.display = 'block';
+  });
 }
 
 // ── WORLD MAP (D3) ────────────────────────────────────────────────────────────

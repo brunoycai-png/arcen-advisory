@@ -37,19 +37,19 @@
 | Lines | Section |
 |-------|---------|
 | 1–9 | `<head>` — meta, title |
-| 10–600 | `<style>` — all CSS |
-| 601–620 | `<nav>` — logo + links + lang + Ask ARCEN + Contact |
-| 621–700 | `<!-- HERO -->` |
-| 701–900 | `<!-- MODULES -->` — m1 CLARITY / m2 ENTRY / m3 GROWTH |
-| 901–960 | `<!-- ADDONS -->` |
-| 961–990 | `<!-- MAP -->` — D3 world map |
-| 991–1060 | `<!-- CASES -->` — carousel |
-| 1061–1160 | `<!-- INSIGHTS -->` — carousel 2×2 |
-| 1161–1210 | `<!-- CONTACT -->` — form → Supabase inquiries |
-| 1211–1230 | `<!-- FOOTER -->` |
-| 1231–1250 | `<!-- AI DRAWER -->` — Ask ARCEN chat panel |
-| 1251–1270 | D3 scripts (cdn.jsdelivr.net) |
-| 1271–1380 | `<script>` — lang switcher, carousel, AI chat, contact form, D3 map |
+| 10–597 | `<style>` — all CSS |
+| 600–640 | `<nav>` — logo + links + lang + globe + Ask ARCEN + Contact |
+| 641–668 | `<!-- HERO -->` |
+| 670–928 | `<!-- MODULES -->` — m1 CLARITY / m2 ENTRY / m3 GROWTH |
+| 930–951 | `<!-- ADDONS -->` |
+| 953–964 | `<!-- MAP -->` — D3 world map anchor |
+| 966–1018 | `<!-- CASES -->` — carousel (3 cases/slide) |
+| 1020–1097 | `<!-- INSIGHTS -->` — carousel 2×2 (4 articles/slide) |
+| 1099–1169 | `<!-- CONTACT -->` — form → /api/contact |
+| 1171–1177 | `<!-- FOOTER -->` |
+| 1181–1203 | `<!-- AI DRAWER -->` — Ask ARCEN chat panel |
+| 1205–1207 | D3 scripts (cdn.jsdelivr.net) |
+| 1208–end | `<script>` — lang switcher, carousel, AI chat, contact form, D3 map |
 
 ---
 

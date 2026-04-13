@@ -33,11 +33,11 @@ module.exports = async function handler(req, res) {
   });
 
   const typeLabels = {
-    'entering-china': 'Entering China',
-    'going-global': 'Going global from China',
-    'advisory': 'Strategic advisory',
-    'ai-visibility': 'AI visibility',
-    'other': 'Something else'
+    'china-entry': 'Entering China',
+    'go-global':   'Going global from China',
+    'advisory':    'Strategic advisory',
+    'ai':          'AI visibility',
+    'other':       'Something else'
   };
 
   const html = `
