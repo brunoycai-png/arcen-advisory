@@ -1,0 +1,1478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ARCEN — Strategic Advisory</title>
+<meta name="description" content="We help European brands enter China — and Chinese brands go global. Strategic advisory, cross-border market entry, and AI visibility.">
+<meta property="og:title" content="ARCEN — Strategic Advisory">
+<meta property="og:description" content="Your trusted Western-educated partner for China — and the world.">
+<style>
+:root {
+  --bg:      #f5f5f7;
+  --bg2:     #ffffff;
+  --text:    #1d1d1f;
+  --text2:   #515154;
+  --text3:   #86868b;
+  --border:  #d2d2d7;
+  --border2: #b0b0b8;
+  --green:   #1D9E75;
+  --green-l: #e4f7f1;
+  --green-d: #0a4d38;
+  --green-m: #0f6e56;
+  --blue:    #2e7ad4;
+  --blue-l:  #e4eef9;
+  --blue-d:  #0c3d7a;
+  --blue-m:  #185fa5;
+  --amber:   #b06010;
+  --amber-l: #fdf0e0;
+  --amber-d: #4a2800;
+  --amber-m: #7a3d08;
+  --radius:  12px;
+  --radius-sm: 8px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 16px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; text-decoration: none; }
+
+.page { max-width: 960px; margin: 0 auto; padding: 0 1.5rem 5rem; }
+
+/* ── NAV ── */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 4rem;
+  position: sticky;
+  top: 0;
+  background: var(--bg);
+  z-index: 100;
+}
+
+.nav-logo {
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: 5px;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.nav-r { display: flex; align-items: center; gap: 24px; }
+
+.nav-lnk {
+  font-size: 13px;
+  color: var(--text2);
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.nav-lnk:hover { color: var(--text); }
+
+/* nav Contact pill (solid) */
+.nav-cta {
+  font-size: 13px; font-weight: 600;
+  padding: 6px 16px; border-radius: 980px;
+  background: var(--text); color: var(--bg2);
+  text-decoration: none; white-space: nowrap;
+  transition: opacity 0.15s;
+}
+.nav-cta:hover { opacity: 0.82; }
+
+/* nav Ask ARCEN (outline with green dot) */
+.nav-ask-ai {
+  display: flex; align-items: center; gap: 6px;
+  background: transparent; border: 1px solid var(--border);
+  border-radius: 980px; padding: 6px 14px;
+  font-size: 12px; font-weight: 500; color: var(--text);
+  cursor: pointer; font-family: inherit; transition: all 0.15s;
+  white-space: nowrap;
+}
+.nav-ask-ai:hover { background: var(--text); color: var(--bg2); border-color: var(--text); }
+.nav-ask-ai-dot { width: 6px; height: 6px; background: #4ade80; border-radius: 50%; flex-shrink: 0; }
+
+.lang { display: flex; gap: 4px; }
+.lang-b {
+  font-size: 12px;
+  font-weight: 500;
+  padding: 4px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  color: var(--text3);
+  background: none;
+  font-family: inherit;
+  transition: all 0.15s;
+}
+.lang-b.on { border-color: var(--border2); color: var(--text); background: var(--bg2); }
+
+/* ── HERO ── */
+.hero {
+  padding: 4rem 0 3.5rem;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 3rem;
+}
+
+.hero-eyebrow {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: var(--text3);
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+.hero-h {
+  font-size: clamp(32px, 4vw, 44px);
+  font-weight: 800;
+  color: var(--text);
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  max-width: 580px;
+  margin-bottom: 1.25rem;
+}
+
+.hero-h em {
+  font-style: normal;
+  color: var(--green);
+  font-weight: 800;
+}
+
+.hero-desc {
+  font-size: 16px;
+  color: var(--text2);
+  line-height: 1.75;
+  max-width: 480px;
+  margin-bottom: 2.5rem;
+}
+
+.hero-bot {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.hero-cred {
+  font-size: 13px;
+  color: var(--text2);
+  line-height: 2;
+  font-weight: 400;
+}
+
+.cta-btn {
+  display: inline-block;
+  padding: 13px 28px;
+  background: var(--text);
+  color: var(--bg2);
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 980px;
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+  transition: opacity 0.2s;
+  text-decoration: none;
+}
+.cta-btn:hover { opacity: 0.82; }
+.cta-note { font-size: 12px; color: var(--text3); margin-top: 7px; text-align: right; }
+
+/* ── SECTION LABEL ── */
+.sec-lbl {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  color: var(--text3);
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+}
+
+/* ── STATS ── */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  margin-bottom: 3rem;
+}
+
+.stat { background: var(--bg2); padding: 1.5rem 1.5rem; }
+.stat-n {
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--text);
+  letter-spacing: -0.03em;
+  margin-bottom: 6px;
+}
+.stat-l { font-size: 13px; color: var(--text2); line-height: 1.5; }
+
+/* ── MODULES ── */
+.mods { margin-bottom: 3rem; }
+
+.mod {
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid;
+  margin-bottom: 12px;
+}
+.m1 { border-color: var(--green); }
+.m2 { border-color: var(--blue); }
+.m3 { border-color: var(--amber); }
+
+.mod-hd { padding: 1.75rem 2rem 1.5rem; }
+.m1 .mod-hd { background: var(--green-l); }
+.m2 .mod-hd { background: var(--blue-l); }
+.m3 .mod-hd { background: var(--amber-l); }
+
+.mod-num { font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 6px; }
+.m1 .mod-num { color: var(--green); }
+.m2 .mod-num { color: var(--blue); }
+.m3 .mod-num { color: var(--amber); }
+
+.mod-title {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 12px;
+}
+.m1 .mod-title { color: var(--green-d); }
+.m2 .mod-title { color: var(--blue-d); }
+.m3 .mod-title { color: var(--amber-d); }
+
+.mod-pain {
+  font-size: 15px;
+  font-style: italic;
+  line-height: 1.65;
+  padding: 10px 14px;
+  border-radius: 8px;
+  display: inline-block;
+}
+.m1 .mod-pain { background: rgba(29,158,117,0.18); color: var(--green-d); }
+.m2 .mod-pain { background: rgba(46,122,212,0.18); color: var(--blue-d); }
+.m3 .mod-pain { background: rgba(176,96,16,0.18); color: var(--amber-d); }
+
+.mod-bd { padding: 1.75rem 2rem; background: var(--bg2); }
+.mod-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+
+.col-l { font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--text3); margin-bottom: 14px; }
+
+.steps { display: flex; flex-direction: column; gap: 14px; }
+.step { display: flex; gap: 14px; align-items: flex-start; }
+.sn {
+  width: 28px; height: 28px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 12px; font-weight: 700; flex-shrink: 0; margin-top: 1px;
+}
+.m1 .sn { background: rgba(29,158,117,0.2); color: var(--green-d); }
+.m2 .sn { background: rgba(46,122,212,0.2); color: var(--blue-d); }
+.m3 .sn { background: rgba(176,96,16,0.2); color: var(--amber-d); }
+
+.st { font-size: 15px; font-weight: 600; color: var(--text); margin-bottom: 4px; }
+.sd { font-size: 14px; color: var(--text2); line-height: 1.65; }
+
+.dels { display: flex; flex-direction: column; gap: 6px; }
+.del {
+  display: flex; gap: 8px; align-items: flex-start;
+  padding: 9px 12px; border-radius: 6px;
+  font-size: 14px; line-height: 1.5;
+}
+.m1 .del { background: var(--green-l); color: var(--green-d); }
+.m2 .del { background: var(--blue-l); color: var(--blue-d); }
+.m3 .del { background: var(--amber-l); color: var(--amber-d); }
+.di { font-weight: 700; flex-shrink: 0; }
+
+.mod-ft {
+  padding: 1.25rem 2rem;
+  display: flex; align-items: center; justify-content: space-between;
+  border-top: 1px solid; flex-wrap: wrap; gap: 8px;
+}
+.m1 .mod-ft { background: var(--green-l); border-color: rgba(29,158,117,0.3); }
+.m2 .mod-ft { background: var(--blue-l); border-color: rgba(46,122,212,0.3); }
+.m3 .mod-ft { background: var(--amber-l); border-color: rgba(176,96,16,0.3); }
+
+.mod-price { font-size: 14px; font-weight: 600; }
+.m1 .mod-price { color: var(--green-d); }
+.m2 .mod-price { color: var(--blue-d); }
+.m3 .mod-price { color: var(--amber-d); }
+
+.mod-cases { display: flex; gap: 6px; flex-wrap: wrap; }
+.mc { font-size: 11px; font-weight: 500; padding: 3px 10px; border-radius: 20px; }
+.m1 .mc { background: rgba(29,158,117,0.2); color: var(--green-d); }
+.m2 .mc { background: rgba(46,122,212,0.2); color: var(--blue-d); }
+.m3 .mc { background: rgba(176,96,16,0.2); color: var(--amber-d); }
+
+.conn { text-align: center; font-size: 13px; color: var(--text3); padding: 6px 0; font-weight: 500; }
+
+/* ── ADDONS ── */
+.addons { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 3rem; }
+.addon {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 1.5rem 1.75rem;
+}
+.addon-t { font-size: 16px; font-weight: 600; color: var(--text); margin-bottom: 8px; }
+.addon-d { font-size: 15px; color: var(--text2); line-height: 1.75; }
+
+/* ── MAP ── */
+.map-box {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--bg2);
+  position: relative;
+  margin-bottom: 1rem;
+}
+.map-tip {
+  position: absolute;
+  background: var(--bg2);
+  border: 1px solid var(--border2);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  font-size: 12px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity .15s;
+  z-index: 10;
+  min-width: 170px;
+}
+.tip-t { font-weight: 600; font-size: 13px; color: var(--text); margin-bottom: 4px; }
+.tip-r { font-size: 12px; color: var(--text2); margin-bottom: 2px; }
+
+.map-lgd { display: flex; justify-content: center; gap: 24px; margin-bottom: 3rem; flex-wrap: wrap; }
+.mli { display: flex; align-items: center; gap: 7px; font-size: 13px; color: var(--text2); }
+.mld { width: 9px; height: 9px; border-radius: 50%; }
+
+/* ── CASES ── */
+.cases { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin-bottom: 3rem; }
+.case {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 1.5rem 1.75rem;
+}
+.case-tag { font-size: 12px; font-weight: 600; color: var(--text3); margin-bottom: 9px; letter-spacing: 0.5px; text-transform: uppercase; }
+.case-t { font-size: 16px; font-weight: 600; color: var(--text); margin-bottom: 9px; line-height: 1.45; }
+.case-d { font-size: 14px; color: var(--text2); line-height: 1.7; }
+
+/* ── BLOG ── */
+.blog { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 3rem; }
+.blog-c {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 1.5rem 1.75rem;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+.blog-c:hover { border-color: var(--text2); }
+.blog-cat { font-size: 12px; font-weight: 600; color: var(--green); margin-bottom: 9px; letter-spacing: 1px; text-transform: uppercase; }
+.blog-t { font-size: 16px; font-weight: 600; color: var(--text); margin-bottom: 9px; line-height: 1.45; }
+.blog-d { font-size: 14px; color: var(--text2); line-height: 1.7; }
+.blog-m { font-size: 13px; color: var(--text3); margin-top: 12px; font-weight: 500; }
+
+/* ── CONTACT ── */
+.contact {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 2.5rem;
+  margin-bottom: 3rem;
+}
+.contact-h {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  margin-bottom: 10px;
+}
+.contact-s { font-size: 15px; color: var(--text2); margin-bottom: 2rem; line-height: 1.8; }
+.fg2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px; }
+.fg { margin-bottom: 12px; }
+.fl { font-size: 13px; font-weight: 500; color: var(--text2); margin-bottom: 6px; display: block; }
+input, textarea, select {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 14px;
+  background: var(--bg);
+  color: var(--text);
+  font-family: inherit;
+  transition: border-color 0.2s;
+  -webkit-appearance: none;
+}
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: var(--green);
+}
+textarea { height: 100px; resize: none; }
+.sbtn {
+  width: 100%;
+  padding: 13px;
+  background: var(--text);
+  color: var(--bg2);
+  border: none;
+  border-radius: 980px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 8px;
+  font-family: inherit;
+  transition: opacity 0.2s;
+}
+.sbtn:hover { opacity: 0.82; }
+.form-success {
+  display: none;
+  text-align: center;
+  padding: 2rem;
+  color: var(--green-m);
+  font-size: 15px;
+  font-weight: 500;
+}
+
+/* ── FOOTER ── */
+.footer {
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.footer-logo { font-size: 14px; font-weight: 800; letter-spacing: 4px; color: var(--text); }
+.footer-copy { font-size: 12px; color: var(--text3); }
+
+/* ── CAROUSEL ── */
+.car-wrap { margin-bottom: 3rem; }
+.car-hd { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; }
+.car-btns { display: flex; gap: 8px; }
+.car-btn {
+  width: 34px; height: 34px; border-radius: 50%;
+  border: 1px solid var(--border); background: var(--bg2);
+  cursor: pointer; display: flex; align-items: center; justify-content: center;
+  color: var(--text2); font-size: 16px; transition: all 0.15s;
+  font-family: inherit; line-height: 1;
+}
+.car-btn:hover:not([disabled]) { border-color: var(--text2); color: var(--text); }
+.car-btn[disabled] { opacity: 0.3; cursor: default; }
+.car-outer { overflow: hidden; }
+.car-track { display: flex; transition: transform 0.35s ease; }
+.car-slide { flex: 0 0 100%; }
+.cases-slide { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; }
+.blog-slide { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+
+/* ── AI DRAWER (slides from right, same pattern as ag-website) ── */
+.ai-overlay {
+  position: fixed; inset: 0; background: rgba(0,0,0,0);
+  pointer-events: none; z-index: 550; transition: background 0.3s;
+}
+.ai-overlay.open { background: rgba(0,0,0,0.15); pointer-events: auto; }
+.ai-drawer {
+  position: fixed; top: 0; right: 0; bottom: 0; width: 340px;
+  background: var(--bg2); border-left: 1px solid var(--border);
+  display: flex; flex-direction: column;
+  transform: translateX(100%);
+  transition: transform 0.35s cubic-bezier(.22,1,.36,1);
+  z-index: 551; box-shadow: -4px 0 24px rgba(0,0,0,0.08);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+.ai-drawer.open { transform: translateX(0); }
+.ai-drawer-head {
+  background: var(--text); padding: 14px 16px;
+  display: flex; align-items: center; gap: 10px; flex-shrink: 0;
+}
+.ai-drawer-av {
+  width: 32px; height: 32px; background: var(--green);
+  border-radius: 50%; display: flex; align-items: center;
+  justify-content: center; font-size: 11px; font-weight: 700;
+  color: #fff; flex-shrink: 0;
+}
+.ai-drawer-info { flex: 1; }
+.ai-drawer-name { font-size: 14px; font-weight: 600; color: #fff; }
+.ai-drawer-sub { font-size: 10px; color: rgba(255,255,255,0.5); margin-top: 1px; }
+.ai-drawer-close {
+  background: rgba(255,255,255,0.12); border: none; color: #fff;
+  border-radius: 50%; width: 28px; height: 28px; font-size: 14px;
+  cursor: pointer; display: flex; align-items: center; justify-content: center;
+  transition: background 0.15s; flex-shrink: 0; font-family: inherit;
+}
+.ai-drawer-close:hover { background: rgba(255,255,255,0.25); }
+.ai-drawer-msgs {
+  flex: 1; overflow-y: auto; padding: 16px;
+  display: flex; flex-direction: column; gap: 10px;
+}
+.ai-drawer-msgs::-webkit-scrollbar { width: 4px; }
+.ai-drawer-msgs::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+.msg { max-width: 85%; padding: 9px 12px; border-radius: 10px; font-size: 13px; line-height: 1.6; white-space: pre-line; }
+.msg-bot { background: var(--bg); color: var(--text); align-self: flex-start; border-radius: 2px 10px 10px 10px; }
+.msg-user { background: var(--text); color: var(--bg2); align-self: flex-end; border-radius: 10px 10px 2px 10px; }
+.msg-typing { display: flex; gap: 4px; align-items: center; padding: 10px 12px; background: var(--bg); border-radius: 2px 10px 10px 10px; align-self: flex-start; }
+.msg-typing span { width: 6px; height: 6px; border-radius: 50%; background: var(--text3); animation: blink 1.2s infinite; }
+.msg-typing span:nth-child(2) { animation-delay: 0.2s; }
+.msg-typing span:nth-child(3) { animation-delay: 0.4s; }
+@keyframes blink { 0%,80%,100% { opacity: 0.3; } 40% { opacity: 1; } }
+.ai-drawer-footer {
+  border-top: 1px solid var(--border); padding: 12px 14px; flex-shrink: 0;
+}
+.ai-drawer-inp-row { display: flex; gap: 8px; align-items: flex-end; }
+.ai-drawer-inp {
+  flex: 1; border: 1px solid var(--border); border-radius: 20px;
+  padding: 10px 14px; font-size: 13px; outline: none;
+  font-family: inherit; resize: none; background: var(--bg);
+  color: var(--text); max-height: 80px; min-height: 40px; line-height: 1.4;
+}
+.ai-drawer-inp:focus { border-color: var(--green); }
+.ai-drawer-send {
+  width: 36px; height: 36px; background: var(--green); border: none;
+  border-radius: 50%; color: #fff; font-size: 15px; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; transition: opacity 0.15s; font-family: inherit;
+}
+.ai-drawer-send:hover { opacity: 0.85; }
+
+/* ── LANGUAGE TOGGLE (3 languages) ── */
+/* EN is default visible; FR and ZH hidden */
+.fr, .zh { display: none; }
+
+/* ZH active */
+body.lang-zh .en { display: none; }
+body.lang-zh .zh { display: block; }
+
+/* FR active */
+body.lang-fr .en { display: none; }
+body.lang-fr .fr { display: block; }
+
+/* Inline variants */
+.zh-inline, .fr-inline { display: none; }
+body.lang-zh .en-inline { display: none; }
+body.lang-zh .zh-inline { display: inline; }
+body.lang-fr .en-inline { display: none; }
+body.lang-fr .fr-inline { display: inline; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 760px) {
+  .nav-r .nav-lnk { display: none; }
+  .nav-r .nav-ask-ai { display: none; }
+  .hero-h { font-size: 28px; }
+  .mod-grid { grid-template-columns: 1fr; }
+  .addons { grid-template-columns: 1fr; }
+  .cases-slide { grid-template-columns: 1fr; }
+  .blog-slide { grid-template-columns: 1fr; }
+  .fg2 { grid-template-columns: 1fr; }
+  .hero-bot { flex-direction: column; align-items: flex-start; }
+  #chat-panel { width: 300px; }
+}
+</style>
+</head>
+
+<body>
+<div class="page">
+
+<!-- NAV -->
+<nav class="nav">
+  <a class="nav-logo" href="#">ARCEN</a>
+  <div class="nav-r">
+    <a class="nav-lnk en" href="#services">Services</a>
+    <a class="nav-lnk fr" href="#services">Services</a>
+    <a class="nav-lnk zh" href="#services">服务</a>
+    <a class="nav-lnk en" href="#cases">Cases</a>
+    <a class="nav-lnk fr" href="#cases">Dossiers</a>
+    <a class="nav-lnk zh" href="#cases">案例</a>
+    <a class="nav-lnk en" href="#insights">Insights</a>
+    <a class="nav-lnk fr" href="#insights">Perspectives</a>
+    <a class="nav-lnk zh" href="#insights">观点</a>
+    <div class="lang">
+      <button class="lang-b on" data-lang="en" onclick="switchLang('en')">EN</button>
+      <button class="lang-b" data-lang="fr" onclick="switchLang('fr')">FR</button>
+      <button class="lang-b" data-lang="zh" onclick="switchLang('zh')">中文</button>
+    </div>
+    <button class="nav-ask-ai" onclick="openAI()">
+      <span class="nav-ask-ai-dot"></span>
+      <span class="en">Ask ARCEN</span>
+      <span class="fr">Demander</span>
+      <span class="zh">咨询</span>
+    </button>
+    <a class="nav-cta en" href="#contact">Contact</a>
+    <a class="nav-cta fr" href="#contact">Contact</a>
+    <a class="nav-cta zh" href="#contact">联系我们</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-eyebrow en">STRATEGIC ADVISORY · CROSS-BORDER · AI VISIBILITY</div>
+  <div class="hero-eyebrow fr">CONSEIL STRATÉGIQUE · EXPANSION INTERNATIONALE · VISIBILITÉ IA</div>
+  <div class="hero-eyebrow zh">战略顾问 · 跨境市场 · AI可见性</div>
+
+  <h1 class="hero-h en">Most consultants tell you <em>what</em> to do.<br>We stay until it's <em>done</em>.</h1>
+  <h1 class="hero-h fr">La plupart des consultants vous disent <em>quoi</em> faire.<br>Nous restons jusqu'à ce que ce soit <em>fait</em>.</h1>
+  <h1 class="hero-h zh">顾问告诉你<em>该做什么</em>。<br>我们陪你把事情<em>做完</em>。</h1>
+
+  <p class="hero-desc en">We help European brands enter China — and Chinese brands go global. In strategy, finance, operations, and AI-era digital visibility. Founded by a dual doctoral executive with 10+ years across Asia and Europe.</p>
+  <p class="hero-desc fr">Nous aidons les marques européennes à entrer en Chine — et les marques chinoises à aller à l'international. En stratégie, finance, opérations et visibilité numérique à l'ère de l'IA. Fondé par un dirigeant à double doctorat avec plus de 10 ans d'expérience en Asie et en Europe.</p>
+  <p class="hero-desc zh">我们帮助欧洲品牌进入中国，帮助中国品牌走向全球——在战略、财务、运营和AI时代的数字可见性上做出正确的决策。由双博士高管创立，拥有10年以上亚欧跨境执行经验。</p>
+
+  <div class="hero-bot">
+    <div class="hero-cred en">Dual Doctoral Executive · 20+ AI invention patents<br>$581M deal modelling · 10yr+ cross-border execution<br>Europe · China · Hong Kong</div>
+    <div class="hero-cred fr">Dirigeant à Double Doctorat · 20+ brevets d'invention IA<br>$581M en modélisation · 10+ ans d'exécution transfrontalière<br>Europe · Chine · Hong Kong</div>
+    <div class="hero-cred zh">双博士高管 · 20余项AI发明专利<br>$5.81亿并购建模经验 · 10年以上跨境执行<br>欧洲 · 中国 · 香港</div>
+    <div class="cta-wrap">
+      <a class="cta-btn en" href="#contact">Start a conversation →</a>
+      <a class="cta-btn fr" href="#contact">Commencer une conversation →</a>
+      <a class="cta-btn zh" href="#contact">开始对话 →</a>
+      <div class="cta-note en">Response within 24 hours</div>
+      <div class="cta-note fr">Réponse sous 24 heures</div>
+      <div class="cta-note zh">24小时内回复</div>
+    </div>
+  </div>
+</section>
+
+<!-- MODULES -->
+<div id="services"></div>
+<div class="sec-lbl en">HOW WE WORK</div>
+<div class="sec-lbl fr">NOTRE APPROCHE</div>
+<div class="sec-lbl zh">服务模块</div>
+<div class="mods">
+
+  <!-- MODULE 01 -->
+  <div class="mod m1">
+    <div class="mod-hd">
+      <div class="mod-num">MODULE 01</div>
+      <div class="mod-title en">CLARITY · See clearly</div>
+      <div class="mod-title fr">CLARTÉ · Voir clairement</div>
+      <div class="mod-title zh">看清楚 · CLARITY</div>
+      <div class="mod-pain en">"I want to enter this market — but I don't know where to start, what the real risks are, or who to trust."</div>
+      <div class="mod-pain fr">« Je veux entrer sur ce marché — mais je ne sais pas par où commencer, quels sont les vrais risques, ni qui faire confiance. »</div>
+      <div class="mod-pain zh">"我想进入这个市场，但不知道从哪里开始，有什么真实风险，也不知道该信任谁。"</div>
+    </div>
+    <div class="mod-bd">
+      <div class="mod-grid">
+        <div>
+          <div class="col-l en">HOW WE WORK</div>
+          <div class="col-l fr">NOTRE APPROCHE</div>
+          <div class="col-l zh">我们怎么做</div>
+          <div class="steps">
+            <div class="step">
+              <div class="sn">1</div>
+              <div>
+                <div class="st en">Deep investigation</div>
+                <div class="st fr">Investigation approfondie</div>
+                <div class="st zh">深度调查</div>
+                <div class="sd en">Platform rules, regulations, registration structures, competitive landscape — every risk surfaced before you commit</div>
+                <div class="sd fr">Règles des plateformes, réglementations, structures d'enregistrement, paysage concurrentiel — tous les risques identifiés avant votre engagement</div>
+                <div class="sd zh">调查平台规则、监管要求、注册架构、竞争格局，在你投入资源之前把所有风险摆上桌面</div>
+              </div>
+            </div>
+            <div class="step">
+              <div class="sn">2</div>
+              <div>
+                <div class="st en">Custom blueprint</div>
+                <div class="st fr">Plan sur mesure</div>
+                <div class="st zh">方案设计</div>
+                <div class="sd en">The optimal entry path for your specific situation — not a template, a real recommendation with clear reasoning</div>
+                <div class="sd fr">Le chemin d'entrée optimal pour votre situation — pas un modèle générique, une vraie recommandation avec un raisonnement clair</div>
+                <div class="sd zh">针对你的具体情况设计最优进入方案——不是通用模板，是有清晰理由的真实建议</div>
+              </div>
+            </div>
+            <div class="step">
+              <div class="sn">3</div>
+              <div>
+                <div class="st en">Decision support</div>
+                <div class="st fr">Aide à la décision</div>
+                <div class="st zh">决策支持</div>
+                <div class="sd en">We walk through every page with you until you are fully confident in your next move</div>
+                <div class="sd fr">Nous parcourons chaque page avec vous jusqu'à ce que vous soyez pleinement confiant dans votre prochaine étape</div>
+                <div class="sd zh">逐页带你看报告，回答每一个问题，直到你对下一步完全有信心</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="col-l en">WHAT YOU RECEIVE</div>
+          <div class="col-l fr">CE QUE VOUS RECEVEZ</div>
+          <div class="col-l zh">你会收到</div>
+          <div class="dels">
+            <div class="del"><div class="di">①</div><div class="en">Market entry feasibility report (EN + CN, PDF)</div><div class="fr">Rapport de faisabilité d'entrée sur le marché (EN + CN, PDF)</div><div class="zh">市场进入可行性报告（中英双语 PDF）</div></div>
+            <div class="del"><div class="di">②</div><div class="en">Registration structure comparison with risk ratings</div><div class="fr">Comparatif des structures d'enregistrement avec évaluation des risques</div><div class="zh">注册架构选项对比表（含风险评级）</div></div>
+            <div class="del"><div class="di">③</div><div class="en">Platform rules and regulatory risk checklist</div><div class="fr">Checklist des règles plateformes et risques réglementaires</div><div class="zh">平台规则与监管风险清单</div></div>
+            <div class="del"><div class="di">④</div><div class="en">Phased action roadmap with clear priorities</div><div class="fr">Feuille de route d'action par phases avec priorités claires</div><div class="zh">分阶段行动路线图（明确优先级）</div></div>
+            <div class="del"><div class="di">⑤</div><div class="en">2 video sessions (walkthrough + Q&A)</div><div class="fr">2 sessions vidéo (présentation + Q&A)</div><div class="zh">2次视频会议（报告说明 + Q&A）</div></div>
+            <div class="del"><div class="di">⑥</div><div class="en">Trusted partner introductions (legal / accounting)</div><div class="fr">Introductions à des partenaires de confiance (juridique / comptabilité)</div><div class="zh">可信赖合作律所 / 会计师行引荐</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mod-ft">
+      <div class="mod-price en">$1,000 – $2,000 · 2 week delivery</div>
+      <div class="mod-price fr">$1 000 – $2 000 · Livraison en 2 semaines</div>
+      <div class="mod-price zh">$1,000 – $2,000 · 2周交付</div>
+      <div class="mod-cases">
+        <span class="mc en">✓ Top-tier European sports org — China entry</span>
+        <span class="mc fr">✓ Organisation sportive européenne — entrée en Chine</span>
+        <span class="mc zh">✓ 欧洲顶级体育组织 — 中国市场进入</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="conn en">↓ You know the landscape. Now let's build.</div>
+  <div class="conn fr">↓ Vous comprenez le marché. Maintenant, construisons.</div>
+  <div class="conn zh">↓ 看清楚了，开始落地</div>
+
+  <!-- MODULE 02 -->
+  <div class="mod m2">
+    <div class="mod-hd">
+      <div class="mod-num">MODULE 02</div>
+      <div class="mod-title en">ENTRY · Launch operations</div>
+      <div class="mod-title fr">ENTRÉE · Lancer les opérations</div>
+      <div class="mod-title zh">落地跑起来 · ENTRY</div>
+      <div class="mod-pain en">"I know what I want to do. I need someone to make it actually happen — accounts, supply chain, operations, visibility."</div>
+      <div class="mod-pain fr">« Je sais ce que je veux faire. J'ai besoin de quelqu'un pour le concrétiser — comptes, chaîne d'approvisionnement, opérations, visibilité. »</div>
+      <div class="mod-pain zh">"我知道要做什么了。我需要有人真正帮我落地——账号、供应链、运营、数字可见性，全部跑起来。"</div>
+    </div>
+    <div class="mod-bd">
+      <div class="mod-grid">
+        <div>
+          <div class="col-l en">HOW WE WORK</div>
+          <div class="col-l fr">NOTRE APPROCHE</div>
+          <div class="col-l zh">我们怎么做</div>
+          <div class="steps">
+            <div class="step">
+              <div class="sn">1</div>
+              <div>
+                <div class="st en">Build the foundation</div>
+                <div class="st fr">Poser les fondations</div>
+                <div class="st zh">搭建基础</div>
+                <div class="sd en">Accounts registered, supply chain mapped, AI search visibility established — done right from day one</div>
+                <div class="sd fr">Comptes enregistrés, chaîne d'approvisionnement cartographiée, visibilité IA établie — bien fait dès le premier jour</div>
+                <div class="sd zh">账号注册、供应链梳理、AI搜索可见性建设——从第一天起把基础架构做对，避免后期返工</div>
+              </div>
+            </div>
+            <div class="step">
+              <div class="sn">2</div>
+              <div>
+                <div class="st en">Launch operations</div>
+                <div class="st fr">Lancer les opérations</div>
+                <div class="st zh">激活运营</div>
+                <div class="sd en">Content localised, sales channels live, first campaigns running, first data coming in</div>
+                <div class="sd fr">Contenu localisé, canaux de vente actifs, premières campagnes lancées, premières données disponibles</div>
+                <div class="sd zh">内容翻译本地化、销售渠道上线、首批推广启动、数据开始进来</div>
+              </div>
+            </div>
+            <div class="step">
+              <div class="sn">3</div>
+              <div>
+                <div class="st en">Optimise and iterate</div>
+                <div class="st fr">Optimiser et itérer</div>
+                <div class="st zh">优化迭代</div>
+                <div class="sd en">Review data, adjust strategy, bring in the right partners, push toward first commercial outcomes</div>
+                <div class="sd fr">Analyser les données, ajuster la stratégie, intégrer les bons partenaires, viser les premiers résultats commerciaux</div>
+                <div class="sd zh">复盘数据、调整策略、引荐关键资源，推动第一批真实商业成果落地</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="col-l en">WHAT YOU RECEIVE</div>
+          <div class="col-l fr">CE QUE VOUS RECEVEZ</div>
+          <div class="col-l zh">你会收到</div>
+          <div class="dels">
+            <div class="del"><div class="di">①</div><div class="en">Social media and e-commerce accounts fully set up</div><div class="fr">Comptes réseaux sociaux et e-commerce entièrement configurés</div><div class="zh">社媒 / 电商账号完整注册与开设</div></div>
+            <div class="del"><div class="di">②</div><div class="en">Content translation and localisation (CN ↔ EN)</div><div class="fr">Traduction et localisation de contenu (CN ↔ EN)</div><div class="zh">内容翻译与本地化（中英互译）</div></div>
+            <div class="del"><div class="di">③</div><div class="en">Supply chain partner vetting and introductions</div><div class="fr">Évaluation et mise en relation avec partenaires de la chaîne d'approvisionnement</div><div class="zh">供应链合作伙伴评估与对接引荐</div></div>
+            <div class="del"><div class="di">④</div><div class="en">AI search visibility setup (GEO / Schema / SEO)</div><div class="fr">Configuration de la visibilité IA (GEO / Schema / SEO)</div><div class="zh">AI数字可见性建设（GEO / Schema / SEO）</div></div>
+            <div class="del"><div class="di">⑤</div><div class="en">Monthly operations report and performance review</div><div class="fr">Rapport mensuel d'exploitation et bilan de performance</div><div class="zh">月度运营报告与数据复盘</div></div>
+            <div class="del"><div class="di">⑥</div><div class="en">AI Agent workflow design (on request)</div><div class="fr">Conception de workflows IA Agent (sur demande)</div><div class="zh">AI Agent 工作流设计（按需）</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mod-ft">
+      <div class="mod-price en">$3,000 – $5,000 / month · 1–2 months</div>
+      <div class="mod-price fr">$3 000 – $5 000 / mois · 1–2 mois</div>
+      <div class="mod-price zh">$3,000 – $5,000 / 月 · 1–2个月</div>
+      <div class="mod-cases">
+        <span class="mc en">✓ European sports org — China ops</span>
+        <span class="mc en">✓ European hardware brand</span>
+        <span class="mc fr">✓ Organisation sportive européenne — opérations en Chine</span>
+        <span class="mc fr">✓ Marque hardware européenne</span>
+        <span class="mc zh">✓ 欧洲体育组织 — 中国运营</span>
+        <span class="mc zh">✓ 欧洲硬件品牌</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="conn en">↓ You're running. Now let's grow.</div>
+  <div class="conn fr">↓ Les opérations tournent. Maintenant, développons.</div>
+  <div class="conn zh">↓ 跑起来了，需要长期伙伴</div>
+
+  <!-- MODULE 03 -->
+  <div class="mod m3">
+    <div class="mod-hd">
+      <div class="mod-num">MODULE 03</div>
+      <div class="mod-title en">GROWTH · Long-term partner</div>
+      <div class="mod-title fr">CROISSANCE · Partenaire à long terme</div>
+      <div class="mod-title zh">持续增长 · GROWTH</div>
+      <div class="mod-pain en">"I need someone I can fully trust — who thinks like a CFO, acts like a strategist, and turns every opportunity into results."</div>
+      <div class="mod-pain fr">« J'ai besoin d'un partenaire en qui j'ai entièrement confiance — qui pense comme un DAF, agit comme un stratège, et transforme chaque opportunité en résultats. »</div>
+      <div class="mod-pain zh">"我需要一个真正可以信任的战略伙伴——能像CFO一样思考，像战略家一样行动，帮我把每一个机会变成真实的商业结果。"</div>
+    </div>
+    <div class="mod-bd">
+      <div class="mod-grid">
+        <div>
+          <div class="col-l en">HOW WE WORK</div>
+          <div class="col-l fr">NOTRE APPROCHE</div>
+          <div class="col-l zh">我们怎么做</div>
+          <div class="steps">
+            <div class="step">
+              <div class="sn">1</div>
+              <div>
+                <div class="st en">Opportunity scanning</div>
+                <div class="st fr">Veille des opportunités</div>
+                <div class="st zh">机会扫描</div>
+                <div class="sd en">Continuously evaluate opportunities, partnerships, risks — always know which ones are worth pursuing</div>
+                <div class="sd fr">Évaluation continue des opportunités, partenariats, risques — toujours savoir lesquels valent la peine d'être poursuivis</div>
+                <div class="sd zh">持续评估商业机会、合作伙伴和风险，让你始终清楚哪些值得追、哪些应该放弃</div>
+              </div>
+            </div>
+            <div class="step">
+              <div class="sn">2</div>
+              <div>
+                <div class="st en">Deal architecture</div>
+                <div class="st fr">Architecture des deals</div>
+                <div class="st zh">方案搭建</div>
+                <div class="sd en">Business plans, financial models, equity structures, proposals — ideas become executable deals</div>
+                <div class="sd fr">Plans d'affaires, modèles financiers, structures actionnariales, propositions — les idées deviennent des transactions exécutables</div>
+                <div class="sd zh">制作商业计划书、财务模型、股权架构、报价提案，把你的想法变成可执行的交易</div>
+              </div>
+            </div>
+            <div class="step">
+              <div class="sn">3</div>
+              <div>
+                <div class="st en">Execute and close</div>
+                <div class="st fr">Exécuter et conclure</div>
+                <div class="st zh">落地成交</div>
+                <div class="sd en">Introduce the right investors, partners, operators — stay in the room until results are real</div>
+                <div class="sd fr">Introduire les bons investisseurs, partenaires, opérateurs — rester jusqu'à ce que les résultats soient réels</div>
+                <div class="sd zh">引荐合适的投资人、合作品牌和执行团队，全程跟进直到交易完成、结果兑现</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="col-l en">WHAT YOU RECEIVE</div>
+          <div class="col-l fr">CE QUE VOUS RECEVEZ</div>
+          <div class="col-l zh">你会收到</div>
+          <div class="dels">
+            <div class="del"><div class="di">①</div><div class="en">Monthly strategy sessions + on-call advisory</div><div class="fr">Sessions stratégiques mensuelles + conseil à la demande</div><div class="zh">月度战略会议 + 随时在线咨询</div></div>
+            <div class="del"><div class="di">②</div><div class="en">Business plans, proposals and commercial documents</div><div class="fr">Plans d'affaires, propositions et documents commerciaux</div><div class="zh">商业计划书 / 提案 / 报价商务文件</div></div>
+            <div class="del"><div class="di">③</div><div class="en">Financial analysis, P&L review and cash flow management</div><div class="fr">Analyse financière, revue du P&L et gestion des flux de trésorerie</div><div class="zh">财务报表分析、P&L复盘、现金流管理</div></div>
+            <div class="del"><div class="di">④</div><div class="en">Equity structure design and optimisation</div><div class="fr">Conception et optimisation de la structure actionnariale</div><div class="zh">股权架构设计与优化</div></div>
+            <div class="del"><div class="di">⑤</div><div class="en">Investor and partner introductions</div><div class="fr">Introductions ciblées d'investisseurs et partenaires</div><div class="zh">投资人 / 合作方精准引荐</div></div>
+            <div class="del"><div class="di">⑥</div><div class="en">Success fee on major commercial outcomes</div><div class="fr">Honoraires de succès sur les résultats commerciaux majeurs</div><div class="zh">重大商业成果成功佣金制</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mod-ft">
+      <div class="mod-price en">$3,500 – $6,000 / month · ongoing</div>
+      <div class="mod-price fr">$3 500 – $6 000 / mois · renouvellement continu</div>
+      <div class="mod-price zh">$3,500 – $6,000 / 月 · 长期续签</div>
+      <div class="mod-cases">
+        <span class="mc en">✓ Global top athlete IP — CFO + strategic advisor</span>
+        <span class="mc fr">✓ IP sportive mondiale — DAF + conseiller stratégique</span>
+        <span class="mc zh">✓ 全球顶级体育IP — CFO + 战略顾问（已签约）</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ADDONS -->
+<div class="sec-lbl en">ADDITIONAL SERVICES</div>
+<div class="sec-lbl fr">SERVICES COMPLÉMENTAIRES</div>
+<div class="sec-lbl zh">附加服务</div>
+<div class="addons">
+  <div class="addon">
+    <div class="addon-t en">Hong Kong and China entity setup</div>
+    <div class="addon-t fr">Création d'entité à Hong Kong et en Chine</div>
+    <div class="addon-t zh">香港 / 中国公司注册</div>
+    <div class="addon-d en">We introduce verified legal firms, auditors, and company secretaries for Hong Kong or mainland China entity registration — one-stop, no friction.</div>
+    <div class="addon-d fr">Nous mettons en relation avec des cabinets juridiques, auditeurs et secrétaires sociaux vérifiés pour l'enregistrement d'entités à Hong Kong ou en Chine continentale — tout-en-un, sans friction.</div>
+    <div class="addon-d zh">引荐经过验证的律所、审计和公司秘书，一站式完成香港或中国内地实体设立。</div>
+  </div>
+  <div class="addon">
+    <div class="addon-t en">Pre-acquisition due diligence</div>
+    <div class="addon-t fr">Due diligence pré-acquisition</div>
+    <div class="addon-t zh">并购前期尽调</div>
+    <div class="addon-d en">Before engaging an investment bank, we help you assess whether a target is worth pursuing — financial health review, risk identification, and go / no-go recommendation.</div>
+    <div class="addon-d fr">Avant d'engager une banque d'investissement, nous vous aidons à évaluer si une cible mérite d'être poursuivie — revue de santé financière, identification des risques, recommandation aller/ne pas aller.</div>
+    <div class="addon-d zh">在聘请投行之前，先用更低成本判断标的是否值得追——财务健康度评估、风险识别、可行性判断。</div>
+  </div>
+</div>
+
+<!-- MAP -->
+<div class="sec-lbl en">CLIENT PRESENCE</div>
+<div class="sec-lbl fr">PRÉSENCE CLIENTS</div>
+<div class="sec-lbl zh">客户分布</div>
+<div class="map-box" id="mapbox">
+  <div class="map-tip" id="maptip"></div>
+  <svg id="mapsvg" style="width:100%;height:auto;display:block"></svg>
+</div>
+<div class="map-lgd">
+  <div class="mli"><div class="mld" style="background:#1D9E75"></div><span class="en">Active clients</span><span class="fr">Clients actifs</span><span class="zh">活跃客户</span></div>
+  <div class="mli"><div class="mld" style="background:#BA7517"></div><span class="en">ARCEN base</span><span class="fr">Base ARCEN</span><span class="zh">ARCEN 总部</span></div>
+</div>
+
+<!-- CASES -->
+<div id="cases"></div>
+<div class="sec-lbl en">SELECTED WORK</div>
+<div class="sec-lbl fr">TRAVAUX SÉLECTIONNÉS</div>
+<div class="sec-lbl zh">客户案例</div>
+<div class="car-wrap">
+  <div class="car-hd">
+    <div></div>
+    <div class="car-btns">
+      <button class="car-btn" id="cases-prev" onclick="carPage('cases',-1)">←</button>
+      <button class="car-btn" id="cases-next" onclick="carPage('cases',1)">→</button>
+    </div>
+  </div>
+  <div class="car-outer">
+    <div class="car-track" id="cases-track">
+      <div class="car-slide cases-slide">
+        <div class="case">
+          <div class="case-tag en">GROWTH · ONGOING</div>
+          <div class="case-tag fr">CROISSANCE · EN COURS</div>
+          <div class="case-tag zh">持续增长 · 进行中</div>
+          <div class="case-t en">Global top-tier athlete IP, France</div>
+          <div class="case-t fr">IP sportive mondiale, France</div>
+          <div class="case-t zh">全球顶级体育IP，法国</div>
+          <div class="case-d en">CFO and strategic advisor. Commercial development, equity structure design, financial governance, and deal-making across Europe and Asia.</div>
+          <div class="case-d fr">DAF et conseiller stratégique. Développement commercial, conception de structure actionnariale, gouvernance financière, et deals en Europe et en Asie.</div>
+          <div class="case-d zh">担任CFO及战略顾问。商业开发、股权架构设计、财务管控，以及欧亚两地的交易推进。</div>
+        </div>
+        <div class="case">
+          <div class="case-tag en">CLARITY + ENTRY + GROWTH · ONGOING</div>
+          <div class="case-tag fr">TOUS MODULES · EN COURS</div>
+          <div class="case-tag zh">全模块 · 进行中</div>
+          <div class="case-t en">Top-tier European sports organisation</div>
+          <div class="case-t fr">Organisation sportive européenne de premier plan</div>
+          <div class="case-t zh">欧洲顶级体育组织</div>
+          <div class="case-d en">Full China market entry analysis — platform structure, regulatory risk, phased entry roadmap, and ongoing strategic advisory.</div>
+          <div class="case-d fr">Analyse complète d'entrée en Chine — structure de plateforme, risques réglementaires, feuille de route par phases, et conseil stratégique continu.</div>
+          <div class="case-d zh">完整中国市场进入分析——平台架构、监管风险、分阶段进入路线图，及持续战略顾问服务。</div>
+        </div>
+        <div class="case">
+          <div class="case-tag en">CLARITY + ENTRY · ONGOING</div>
+          <div class="case-tag fr">CLARTÉ + ENTRÉE · EN COURS</div>
+          <div class="case-tag zh">看清楚 + 落地 · 进行中</div>
+          <div class="case-t en">European entertainment company</div>
+          <div class="case-t fr">Société de divertissement européenne</div>
+          <div class="case-t zh">欧洲娱乐公司</div>
+          <div class="case-d en">China market entry strategy, social media and e-commerce registration structure, and operational execution.</div>
+          <div class="case-d fr">Stratégie d'entrée sur le marché chinois, structure d'enregistrement réseaux sociaux et e-commerce, et exécution opérationnelle.</div>
+          <div class="case-d zh">中国市场进入战略、社媒及电商注册架构设计，以及运营执行落地。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- INSIGHTS -->
+<div id="insights"></div>
+<div class="sec-lbl en">INSIGHTS</div>
+<div class="sec-lbl fr">PERSPECTIVES</div>
+<div class="sec-lbl zh">观点与洞察</div>
+<div class="car-wrap">
+  <div class="car-hd">
+    <div></div>
+    <div class="car-btns">
+      <button class="car-btn" id="blog-prev" onclick="carPage('blog',-1)">←</button>
+      <button class="car-btn" id="blog-next" onclick="carPage('blog',1)">→</button>
+    </div>
+  </div>
+  <div class="car-outer">
+    <div class="car-track" id="blog-track">
+      <!-- Page 1: 4 articles in 2×2 grid -->
+      <div class="car-slide blog-slide">
+        <div class="blog-c">
+          <div class="blog-cat en">MARKET ENTRY</div>
+          <div class="blog-cat fr">ENTRÉE SUR LE MARCHÉ</div>
+          <div class="blog-cat zh">市场进入</div>
+          <div class="blog-t en">Five structural mistakes European brands make when entering China</div>
+          <div class="blog-t fr">Cinq erreurs structurelles que font les marques européennes en entrant en Chine</div>
+          <div class="blog-t zh">欧洲品牌进入中国时最常犯的五个结构性错误</div>
+          <div class="blog-d en">The account registration structure you choose on day one determines what you can and cannot do for the next five years.</div>
+          <div class="blog-d fr">La structure d'enregistrement de compte que vous choisissez le premier jour détermine ce que vous pouvez et ne pouvez pas faire pendant les cinq prochaines années.</div>
+          <div class="blog-d zh">你在第一天选择的账号注册架构，决定了未来五年你能做什么、不能做什么。</div>
+          <div class="blog-m en">Coming soon · 8 min read</div>
+          <div class="blog-m fr">Bientôt disponible · 8 min de lecture</div>
+          <div class="blog-m zh">即将发布 · 8分钟阅读</div>
+        </div>
+        <div class="blog-c">
+          <div class="blog-cat en">AI VISIBILITY</div>
+          <div class="blog-cat fr">VISIBILITÉ IA</div>
+          <div class="blog-cat zh">AI可见性</div>
+          <div class="blog-t en">Why ChatGPT doesn't know your brand exists — and how to fix it</div>
+          <div class="blog-t fr">Pourquoi ChatGPT ne sait pas que votre marque existe — et comment y remédier</div>
+          <div class="blog-t zh">为什么ChatGPT不知道你的品牌存在——以及如何解决</div>
+          <div class="blog-d en">GEO is the new SEO. If your brand isn't structured for AI search, you're invisible to the fastest-growing discovery channel.</div>
+          <div class="blog-d fr">Le GEO est le nouveau SEO. Si votre marque n'est pas structurée pour la recherche IA, vous êtes invisible sur le canal de découverte à la croissance la plus rapide.</div>
+          <div class="blog-d zh">GEO是新的SEO。如果你的品牌没有为AI搜索做好结构化，你在增长最快的发现渠道上将完全不可见。</div>
+          <div class="blog-m en">Coming soon · 6 min read</div>
+          <div class="blog-m fr">Bientôt disponible · 6 min de lecture</div>
+          <div class="blog-m zh">即将发布 · 6分钟阅读</div>
+        </div>
+        <div class="blog-c">
+          <div class="blog-cat en">STRATEGY</div>
+          <div class="blog-cat fr">STRATÉGIE</div>
+          <div class="blog-cat zh">战略</div>
+          <div class="blog-t en">How athlete IP becomes a global business — a practical framework</div>
+          <div class="blog-t fr">Comment l'IP d'un athlète devient une entreprise mondiale — un cadre pratique</div>
+          <div class="blog-t zh">运动员IP如何成为全球商业——一个实用框架</div>
+          <div class="blog-d en">From personal brand to commercial entity: equity structure, revenue diversification, and the decisions that determine long-term value.</div>
+          <div class="blog-d fr">De la marque personnelle à l'entité commerciale : structure actionnariale, diversification des revenus, et les décisions qui déterminent la valeur à long terme.</div>
+          <div class="blog-d zh">从个人品牌到商业实体：股权架构、收入多元化，以及决定长期价值的关键决策。</div>
+          <div class="blog-m en">Coming soon · 7 min read</div>
+          <div class="blog-m fr">Bientôt disponible · 7 min de lecture</div>
+          <div class="blog-m zh">即将发布 · 7分钟阅读</div>
+        </div>
+        <div class="blog-c">
+          <div class="blog-cat en">FINANCE</div>
+          <div class="blog-cat fr">FINANCE</div>
+          <div class="blog-cat zh">财务</div>
+          <div class="blog-t en">Pre-acquisition due diligence: what to check before calling the investment bank</div>
+          <div class="blog-t fr">Due diligence pré-acquisition : quoi vérifier avant d'appeler la banque d'investissement</div>
+          <div class="blog-t zh">并购前期尽调：在联系投行之前需要核查什么</div>
+          <div class="blog-d en">The financial signals that determine whether a target is worth pursuing — and how to read them quickly.</div>
+          <div class="blog-d fr">Les signaux financiers qui déterminent si une cible mérite d'être poursuivie — et comment les lire rapidement.</div>
+          <div class="blog-d zh">判断一个标的是否值得追的财务信号——以及如何快速解读。</div>
+          <div class="blog-m en">Coming soon · 9 min read</div>
+          <div class="blog-m fr">Bientôt disponible · 9 min de lecture</div>
+          <div class="blog-m zh">即将发布 · 9分钟阅读</div>
+        </div>
+      </div>
+      <!-- Add future articles as new <div class="car-slide blog-slide">...</div> pages here -->
+    </div>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<div id="contact"></div>
+<div class="sec-lbl en">GET IN TOUCH</div>
+<div class="sec-lbl fr">NOUS CONTACTER</div>
+<div class="sec-lbl zh">联系我们</div>
+<div class="contact">
+  <div class="contact-h en">Start a conversation</div>
+  <div class="contact-h fr">Commencer une conversation</div>
+  <div class="contact-h zh">开始对话</div>
+  <div class="contact-s en">Tell us briefly what you're working on. We'll respond within 24 hours — no sales calls, no pitch decks. Just an honest conversation about whether we can help.</div>
+  <div class="contact-s fr">Dites-nous brièvement ce sur quoi vous travaillez. Nous vous répondrons sous 24 heures — pas d'appels commerciaux, pas de présentations. Juste une conversation honnête pour savoir si nous pouvons vous aider.</div>
+  <div class="contact-s zh">简单告诉我们你正在做什么。我们将在24小时内回复——没有推销电话，没有PPT。只是一次关于我们能否帮上忙的坦诚对话。</div>
+  <div id="form-wrap">
+    <div class="fg2">
+      <div>
+        <label class="fl en">Your name</label>
+        <label class="fl fr">Votre nom</label>
+        <label class="fl zh">你的姓名</label>
+        <input type="text" id="f-name" placeholder="Name">
+      </div>
+      <div>
+        <label class="fl en">Email address</label>
+        <label class="fl fr">Adresse email</label>
+        <label class="fl zh">邮件地址</label>
+        <input type="email" id="f-email" placeholder="email@company.com">
+      </div>
+      <div>
+        <label class="fl en">Organisation</label>
+        <label class="fl fr">Organisation</label>
+        <label class="fl zh">公司 / 品牌</label>
+        <input type="text" id="f-org" placeholder="Company / brand">
+      </div>
+      <div>
+        <label class="fl en">What you need</label>
+        <label class="fl fr">Ce dont vous avez besoin</label>
+        <label class="fl zh">需求类型</label>
+        <select id="f-type">
+          <option value="china-entry" class="en">Entering China</option>
+          <option value="china-entry" class="fr">Entrer en Chine</option>
+          <option value="china-entry" class="zh">进入中国市场</option>
+          <option value="go-global" class="en">Going global from China</option>
+          <option value="go-global" class="fr">Expansion internationale depuis la Chine</option>
+          <option value="go-global" class="zh">中国品牌出海</option>
+          <option value="advisory" class="en">Strategic advisory</option>
+          <option value="advisory" class="fr">Conseil stratégique</option>
+          <option value="advisory" class="zh">战略顾问</option>
+          <option value="ai" class="en">AI visibility</option>
+          <option value="ai" class="fr">Visibilité IA</option>
+          <option value="ai" class="zh">AI可见性</option>
+          <option value="other" class="en">Something else</option>
+          <option value="other" class="fr">Autre chose</option>
+          <option value="other" class="zh">其他</option>
+        </select>
+      </div>
+    </div>
+    <div class="fg">
+      <label class="fl en">Tell us more (optional)</label>
+      <label class="fl fr">Dites-nous en plus (optionnel)</label>
+      <label class="fl zh">更多详情（选填）</label>
+      <textarea id="f-msg" placeholder="A few sentences about your situation..."></textarea>
+    </div>
+    <button class="sbtn en" onclick="submitForm()">Send message →</button>
+    <button class="sbtn fr" onclick="submitForm()">Envoyer le message →</button>
+    <button class="sbtn zh" onclick="submitForm()">发送消息 →</button>
+  </div>
+  <div class="form-success" id="form-success">
+    <div class="en">Thank you. We'll be in touch within 24 hours.</div>
+    <div class="fr">Merci. Nous vous répondrons sous 24 heures.</div>
+    <div class="zh">感谢你的留言。我们将在24小时内与你联系。</div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <div class="footer-logo">ARCEN</div>
+  <div class="footer-copy en">Strategic Advisory · Cross-Border · AI Visibility · © 2026</div>
+  <div class="footer-copy fr">Conseil stratégique · Expansion internationale · Visibilité IA · © 2026</div>
+  <div class="footer-copy zh">战略顾问 · 跨境市场 · AI可见性 · © 2026</div>
+</div>
+
+</div><!-- .page -->
+
+<!-- AI DRAWER -->
+<div class="ai-overlay" id="aiOverlay" onclick="closeAI()"></div>
+<div class="ai-drawer" id="aiDrawer" role="dialog" aria-modal="true">
+  <div class="ai-drawer-head">
+    <div class="ai-drawer-av">AI</div>
+    <div class="ai-drawer-info">
+      <div class="ai-drawer-name en">Ask ARCEN</div>
+      <div class="ai-drawer-name fr">Demander à ARCEN</div>
+      <div class="ai-drawer-name zh">咨询 ARCEN</div>
+      <div class="ai-drawer-sub en">AI assistant · replies instantly</div>
+      <div class="ai-drawer-sub fr">Assistant IA · répond instantanément</div>
+      <div class="ai-drawer-sub zh">AI助手 · 即时回复</div>
+    </div>
+    <button class="ai-drawer-close" onclick="closeAI()">✕</button>
+  </div>
+  <div class="ai-drawer-msgs" id="aiMsgs"></div>
+  <div class="ai-drawer-footer">
+    <div class="ai-drawer-inp-row">
+      <textarea class="ai-drawer-inp" id="aiInp" rows="1" placeholder="Ask me anything..."></textarea>
+      <button class="ai-drawer-send" id="aiSend" onclick="chatSend()">→</button>
+    </div>
+  </div>
+</div>
+
+<!-- D3 MAP -->
+<script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/topojson-client@3/dist/topojson-client.min.js"></script>
+<script>
+// ── LANG SWITCHER ─────────────────────────────────────────────────────────────
+// IMPORTANT: body class drives all .en / .fr / .zh visibility via CSS
+function switchLang(lang) {
+  localStorage.setItem('ag_lang', lang);
+  document.body.className = document.body.className.replace(/\blang-\S+/g, '').trim();
+  document.body.classList.add('lang-' + lang);
+  document.querySelectorAll('.lang-b').forEach(function(b) {
+    b.classList.toggle('on', b.dataset.lang === lang);
+  });
+  document.documentElement.lang = lang;
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  switchLang(localStorage.getItem('ag_lang') || 'en');
+});
+
+// ── CAROUSEL ──────────────────────────────────────────────────────────────────
+var CAR = {};
+
+function carInit(id, total) {
+  CAR[id] = { page: 0, total: total };
+  carDraw(id);
+}
+
+function carPage(id, dir) {
+  var c = CAR[id];
+  c.page = Math.max(0, Math.min(c.total - 1, c.page + dir));
+  carDraw(id);
+}
+
+function carDraw(id) {
+  var c = CAR[id];
+  var track = document.getElementById(id + '-track');
+  if (track) track.style.transform = 'translateX(-' + (c.page * 100) + '%)';
+  var prev = document.getElementById(id + '-prev');
+  var next = document.getElementById(id + '-next');
+  if (prev) prev.disabled = c.page === 0;
+  if (next) next.disabled = c.page >= c.total - 1;
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  carInit('cases', document.querySelectorAll('#cases-track .car-slide').length || 1);
+  carInit('blog',  document.querySelectorAll('#blog-track .car-slide').length || 1);
+});
+
+// ── AI CHAT ───────────────────────────────────────────────────────────────────
+var CHAT_RESPONSES = {
+  en: {
+    greeting: "Hi! I'm the ARCEN AI assistant. How can I help you today?",
+    services: "ARCEN offers three modules:\n\n• Module 01 CLARITY — Market investigation + entry blueprint ($1K–$2K, 2-week delivery)\n• Module 02 ENTRY — Full launch operations ($3K–$5K/month)\n• Module 03 GROWTH — Long-term strategic partner ($3.5K–$6K/month)\n\nWhich one sounds relevant to you?",
+    china: "China market entry is our core expertise. Module 01 CLARITY starts with a deep investigation: platform rules, regulatory risks, registration structure options — everything before you commit. Delivered in 2 weeks. Want to learn more or start a conversation?",
+    ai: "AI visibility (GEO) is about making sure AI systems like ChatGPT, Perplexity, and Claude know your brand exists and recommend it. It's different from SEO — it's about structured data, citations, and authority signals. We build this into every engagement.",
+    price: "Pricing depends on the module:\n• CLARITY: $1,000–$2,000 (one-time)\n• ENTRY: $3,000–$5,000/month\n• GROWTH: $3,500–$6,000/month\n\nAll engagements start with a free conversation. No pitch decks, no sales calls.",
+    contact: "The best way is through our contact form on this page. We respond within 24 hours. Just scroll down to the 'Get in Touch' section.",
+    default: "Good question. For the most direct answer, I'd recommend starting a conversation through our contact form — we respond within 24 hours and it's always a real conversation, not a sales pitch."
+  },
+  fr: {
+    greeting: "Bonjour ! Je suis l'assistant IA d'ARCEN. Comment puis-je vous aider ?",
+    services: "ARCEN propose trois modules :\n\n• Module 01 CLARTÉ — Analyse de marché + plan d'entrée ($1K–$2K, livraison en 2 semaines)\n• Module 02 ENTRÉE — Lancement complet des opérations ($3K–$5K/mois)\n• Module 03 CROISSANCE — Partenaire stratégique long terme ($3,5K–$6K/mois)",
+    china: "L'entrée sur le marché chinois est notre cœur de métier. Le Module 01 CLARTÉ commence par une investigation approfondie : règles des plateformes, risques réglementaires, structures d'enregistrement. Livraison en 2 semaines.",
+    ai: "La visibilité IA (GEO) consiste à s'assurer que ChatGPT, Perplexity et Claude connaissent votre marque. C'est différent du SEO — données structurées, citations, signaux d'autorité. Nous l'intégrons à chaque mission.",
+    price: "Les tarifs dépendent du module :\n• CLARTÉ : 1 000–2 000 $ (ponctuel)\n• ENTRÉE : 3 000–5 000 $/mois\n• CROISSANCE : 3 500–6 000 $/mois",
+    contact: "La meilleure façon est notre formulaire de contact sur cette page. Nous répondons sous 24 heures.",
+    default: "Bonne question. Pour une réponse directe, commencez une conversation via notre formulaire de contact — réponse sous 24 heures, toujours une vraie conversation."
+  },
+  zh: {
+    greeting: "你好！我是 ARCEN 的 AI 助手。有什么可以帮助你？",
+    services: "ARCEN 提供三个服务模块：\n\n• 模块01 看清楚 — 市场调查+进入方案（$1K–$2K，2周交付）\n• 模块02 落地跑 — 全面运营启动（$3K–$5K/月）\n• 模块03 持续增长 — 长期战略伙伴（$3.5K–$6K/月）\n\n哪个模块和你的需求最相关？",
+    china: "中国市场进入是我们的核心专长。模块01「看清楚」从深度调查开始：平台规则、监管风险、注册架构选项——在你投入资源之前把一切摆清楚。2周交付。",
+    ai: "AI可见性（GEO）是指确保 ChatGPT、Perplexity、Claude 等AI系统知道你的品牌存在并主动推荐它。与传统SEO不同，核心是结构化数据、引用权威和信号建设。我们在每个项目中都会做这部分。",
+    price: "价格取决于模块：\n• 看清楚：$1,000–$2,000（一次性）\n• 落地跑：$3,000–$5,000/月\n• 持续增长：$3,500–$6,000/月\n\n所有合作都从一次免费对话开始。",
+    contact: "最直接的方式是使用页面下方的联系表单。我们24小时内回复，没有推销，只有真实对话。",
+    default: "好问题。最直接的答案，建议通过联系表单开始一次对话——24小时内回复，真实对话，不是推销。"
+  }
+};
+
+function getLang() {
+  return localStorage.getItem('ag_lang') || 'en';
+}
+
+function chatGetResponse(msg) {
+  var lang = getLang();
+  var r = CHAT_RESPONSES[lang] || CHAT_RESPONSES['en'];
+  var m = msg.toLowerCase();
+  if (m.match(/service|module|offer|what do|what can|quoi|que fait|服务|模块|提供/)) return r.services;
+  if (m.match(/china|chine|enter|entrer|market|marché|中国|进入|市场/)) return r.china;
+  if (m.match(/ai|gpt|visibility|visibilit|llm|search|可见|ai搜/)) return r.ai;
+  if (m.match(/price|cost|pricing|tarif|combien|how much|多少|价格|收费/)) return r.price;
+  if (m.match(/contact|reach|talk|parler|joindre|联系|怎么联系|对话/)) return r.contact;
+  return r.default;
+}
+
+function addMsg(text, role) {
+  var msgs = document.getElementById('aiMsgs');
+  var div = document.createElement('div');
+  div.className = 'msg msg-' + role;
+  div.textContent = text;
+  msgs.appendChild(div);
+  msgs.scrollTop = msgs.scrollHeight;
+}
+
+function openAI() {
+  document.getElementById('aiDrawer').classList.add('open');
+  document.getElementById('aiOverlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+  var msgs = document.getElementById('aiMsgs');
+  if (msgs.children.length === 0) {
+    var lang = getLang();
+    var r = CHAT_RESPONSES[lang] || CHAT_RESPONSES['en'];
+    addMsg(r.greeting, 'bot');
+  }
+  setTimeout(function() { document.getElementById('aiInp').focus(); }, 150);
+}
+
+function closeAI() {
+  document.getElementById('aiDrawer').classList.remove('open');
+  document.getElementById('aiOverlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function chatSend() {
+  var inp = document.getElementById('aiInp');
+  var msg = inp.value.trim();
+  if (!msg) return;
+  addMsg(msg, 'user');
+  inp.value = '';
+  inp.style.height = 'auto';
+  // Typing indicator
+  var msgs = document.getElementById('aiMsgs');
+  var typing = document.createElement('div');
+  typing.className = 'msg-typing';
+  typing.innerHTML = '<span></span><span></span><span></span>';
+  msgs.appendChild(typing);
+  msgs.scrollTop = msgs.scrollHeight;
+  // TODO: replace with real Groq API call via /api/chat.js
+  setTimeout(function() {
+    typing.remove();
+    addMsg(chatGetResponse(msg), 'bot');
+  }, 700);
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  var inp = document.getElementById('aiInp');
+  if (inp) {
+    inp.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); chatSend(); }
+    });
+    inp.addEventListener('input', function() {
+      this.style.height = 'auto';
+      this.style.height = Math.min(this.scrollHeight, 80) + 'px';
+    });
+  }
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeAI();
+  });
+});
+
+// ── SUPABASE ──────────────────────────────────────────────────────────────────
+var SUPABASE_URL = 'https://lgcxehxrpnzvyjojukod.supabase.co';
+var SUPABASE_KEY = 'sb_publishable_xqjvFfsbHlT8A7CsdaEsMw_Q2asL6i8';
+
+// ── CONTACT FORM ──────────────────────────────────────────────────────────────
+function submitForm() {
+  var name  = document.getElementById('f-name').value.trim();
+  var email = document.getElementById('f-email').value.trim();
+  var org   = document.getElementById('f-org').value.trim();
+  var type  = document.getElementById('f-type').value;
+  var msg   = document.getElementById('f-msg').value.trim();
+  var lang  = localStorage.getItem('ag_lang') || 'en';
+  if (!name || !email) return;
+
+  fetch(SUPABASE_URL + '/rest/v1/inquiries', {
+    method: 'POST',
+    headers: {
+      'apikey': SUPABASE_KEY,
+      'Authorization': 'Bearer ' + SUPABASE_KEY,
+      'Content-Type': 'application/json',
+      'Prefer': 'return=minimal'
+    },
+    body: JSON.stringify({ name: name, email: email, org: org, type: type, message: msg, lang: lang })
+  });
+
+  document.getElementById('form-wrap').style.display = 'none';
+  document.getElementById('form-success').style.display = 'block';
+}
+
+// ── WORLD MAP (D3) ────────────────────────────────────────────────────────────
+(function() {
+  const W = 960, H = 460;
+  const mapsvg = d3.select("#mapsvg").attr("viewBox", `0 0 ${W} ${H}`);
+  const maptip = document.getElementById("maptip");
+
+  const proj = d3.geoNaturalEarth1().scale(168).translate([W * 0.5, H * 0.72]);
+  const geoPath = d3.geoPath().projection(proj);
+
+  mapsvg.append("defs").append("clipPath").attr("id", "mapcl")
+    .append("rect").attr("x", 0).attr("y", 0).attr("width", W).attr("height", H);
+
+  const hi  = { "250": "#e4f7f1", "578": "#e4f7f1", "208": "#e4f7f1", "344": "#fdf0e0" };
+  const cl  = {
+    "250": { label: "France",    count: 2, base: false, rows: ["Athlete IP · Entry + Growth", "Entertainment Co · Clarity + Entry"] },
+    "578": { label: "Norway",    count: 1, base: false, rows: ["European sports org · All modules"] },
+    "208": { label: "Denmark",   count: 1, base: false, rows: ["European hardware brand · Growth"] },
+    "344": { label: "Hong Kong", count: null, base: true, rows: ["ARCEN Strategic Advisory Base"] },
+  };
+  const dp  = { "250": [2.35, 46.8], "578": [10.0, 60.5], "208": [10.0, 56.0], "344": [114.17, 22.32] };
+
+  const oceanColor = "#f0f0f2";
+  const landColor  = "#e8e8ea";
+
+  mapsvg.append("rect").attr("width", W).attr("height", H).attr("fill", oceanColor);
+
+  fetch("https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json")
+    .then(r => r.json())
+    .then(world => {
+      const countries = topojson.feature(world, world.objects.countries);
+
+      mapsvg.selectAll("path.country")
+        .data(countries.features)
+        .enter().append("path")
+        .attr("class", "country")
+        .attr("d", geoPath)
+        .attr("fill", d => hi[d.id] || landColor)
+        .attr("stroke", "#ffffff")
+        .attr("stroke-width", 0.5)
+        .attr("clip-path", "url(#mapcl)");
+
+      Object.entries(cl).forEach(([id, c]) => {
+        const coords = dp[id];
+        if (!coords) return;
+        const [x, y] = proj(coords);
+        const col = c.base ? "#b06010" : "#1D9E75";
+
+        mapsvg.append("circle").attr("cx", x).attr("cy", y).attr("r", c.base ? 5 : 6)
+          .attr("fill", col).attr("opacity", 0.9)
+          .on("mouseenter", function(event) {
+            const br = document.getElementById("mapbox").getBoundingClientRect();
+            const sr = mapsvg.node().getBoundingClientRect();
+            const tx = x * (sr.width / W) + (sr.left - br.left) + 10;
+            const ty = y * (sr.height / H) + (sr.top - br.top) - 14;
+            maptip.innerHTML = `<div class="tip-t">${c.label}${c.count ? " · " + c.count + " client" + (c.count > 1 ? "s" : "") : ""}</div>`
+              + c.rows.map(r => `<div class="tip-r">${r}</div>`).join("");
+            maptip.style.left = tx + "px";
+            maptip.style.top  = ty + "px";
+            maptip.style.opacity = "1";
+          })
+          .on("mouseleave", function() { maptip.style.opacity = "0"; });
+
+        if (c.count) {
+          mapsvg.append("circle").attr("cx", x + 7).attr("cy", y - 7).attr("r", 6)
+            .attr("fill", "#ffffff").attr("stroke", col).attr("stroke-width", 1.2);
+          mapsvg.append("text").attr("x", x + 7).attr("y", y - 4).attr("text-anchor", "middle")
+            .attr("font-size", "7.5").attr("font-weight", "600").attr("fill", col)
+            .attr("font-family", "-apple-system, sans-serif").text(c.count);
+        }
+
+        const off = { "250": [0, 28], "578": [-38, 0], "208": [30, 14], "344": [-22, 22] };
+        const [ox, oy] = off[id] || [0, 22];
+        mapsvg.append("text").attr("x", x + ox).attr("y", y + oy).attr("text-anchor", "middle")
+          .attr("font-size", "11").attr("font-weight", "600")
+          .attr("fill", c.base ? "#4a2800" : "#0a4d38")
+          .attr("font-family", "-apple-system, sans-serif").text(c.label);
+      });
+
+      [
+        { t: "EUROPE", lon: -14, lat: 55 }, { t: "ASIA", lon: 88, lat: 42 },
+        { t: "AFRICA", lon: 20, lat: 2 },   { t: "N AMERICA", lon: -95, lat: 42 },
+        { t: "S AMERICA", lon: -60, lat: -18 }, { t: "OCEANIA", lon: 134, lat: -25 }
+      ].forEach(({ t, lon, lat }) => {
+        const [x, y] = proj([lon, lat]);
+        if (y < 0 || y > H) return;
+        mapsvg.append("text").attr("x", x).attr("y", y).attr("text-anchor", "middle")
+          .attr("font-size", "8.5").attr("letter-spacing", "1.5").attr("opacity", "0.3")
+          .attr("fill", "#1d1d1f").attr("font-family", "-apple-system, sans-serif").text(t);
+      });
+
+      const defs = mapsvg.select("defs");
+      const gT = defs.append("linearGradient").attr("id", "fT").attr("x1","0").attr("y1","0").attr("x2","0").attr("y2","1");
+      gT.append("stop").attr("offset","0%").attr("stop-color", oceanColor).attr("stop-opacity","1");
+      gT.append("stop").attr("offset","100%").attr("stop-color", oceanColor).attr("stop-opacity","0");
+      const gB = defs.append("linearGradient").attr("id", "fB").attr("x1","0").attr("y1","0").attr("x2","0").attr("y2","1");
+      gB.append("stop").attr("offset","0%").attr("stop-color", oceanColor).attr("stop-opacity","0");
+      gB.append("stop").attr("offset","100%").attr("stop-color", oceanColor).attr("stop-opacity","1");
+      mapsvg.append("rect").attr("width", W).attr("height", 55).attr("fill", "url(#fT)");
+      mapsvg.append("rect").attr("y", H - 40).attr("width", W).attr("height", 40).attr("fill", "url(#fB)");
+
+    }).catch(function() {});
+})();
+</script>
+
+</body>
+</html>

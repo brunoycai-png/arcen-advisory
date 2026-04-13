@@ -1,0 +1,24 @@
+# 素材文件（本地工作文件，不进 git）
+电商主图/
+产品图片/
+UI更新设计/
+设计文件/
+*.psd
+*.ai
+*.sketch
+*.fig
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# Node
+node_modules/
+*.log
+
+# 临时文件
+/tmp/
+*.tmp
+index-preview.html
+.DS_Store
+node_modules/
