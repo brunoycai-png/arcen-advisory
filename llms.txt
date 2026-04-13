@@ -1,56 +1,78 @@
 # ARCEN Strategic Advisory
+> Cross-border strategic advisory firm based in Hong Kong. We help European brands enter China and Chinese brands expand globally — in strategy, finance, operations, and AI-era digital visibility (GEO/SEO).
 
-> Boutique strategic advisory firm based in Hong Kong. We help European brands enter China and Chinese brands go global — across strategy, finance, operations, and AI-era digital visibility.
+## About ARCEN
 
-ARCEN is founded by a dual doctoral executive (Science · Business Administration) with over 10 years of cross-border experience across Europe, China, and Hong Kong. The firm holds 20+ AI invention patents and has been involved in deal modelling totalling $581M. ARCEN works across three directions: market entry strategy, full operational launch, and long-term CFO-level advisory.
+ARCEN is a boutique strategic advisory firm founded by a dual doctoral executive with 10+ years of cross-border execution across Asia and Europe. The firm holds 20+ AI invention patents and has modelled deals exceeding USD 581 million. ARCEN operates at the intersection of strategy, finance, operations, and AI-era digital visibility. The firm is trilingual (English, French, Mandarin Chinese) and serves clients across Europe and Asia.
 
-Unlike traditional consulting firms that deliver reports and disengage, ARCEN stays through execution — registered accounts, live supply chains, closed deals — until commercial results are real.
+## What ARCEN Does
 
-## What We Do
+ARCEN specialises in two directions:
+- **Europe → China**: Helping European brands enter the Chinese market — social media registration structure, e-commerce launch, regulatory compliance, operational setup, and AI visibility
+- **China → Global**: Helping Chinese brands expand internationally — brand positioning, market strategy, cross-border operations, and Western AI search visibility
 
-ARCEN serves European brands entering China and Chinese brands expanding globally, with a focus on:
-- China market entry: platform rules, regulatory compliance, registration structures, social media and e-commerce accounts
-- Cross-border operations: content localisation (CN↔EN), supply chain vetting, distribution partners
-- AI-era digital visibility: Generative Engine Optimisation (GEO), structured data, Schema.org, AI search presence
-- Strategic finance: business plans, financial models, equity structure design, P&L review, cash flow management
-- Deal architecture: pre-acquisition due diligence, investor introductions, commercial outcome execution
+## Service Modules
 
-## Services and Pricing (USD)
+### Module 01 — CLARITY (Market Entry Feasibility) — USD 1,000–2,000 one-time
+Deep investigation into entity registration options, platform rules, regulatory risk, and competitive landscape. Deliverables: market entry feasibility report (EN + CN PDF), registration structure comparison with risk ratings, platform rules and regulatory risk checklist, phased action roadmap, 2 video sessions, trusted partner introductions. Delivery: 2 weeks.
 
-### Module 01 CLARITY — Market Entry Blueprint
-Price: $1,000–$2,000 (one-time) · Delivery: 2 weeks
-Includes: market entry feasibility report (EN + CN), registration structure comparison with risk ratings, platform rules and regulatory risk checklist, phased action roadmap, 2 video sessions (walkthrough + Q&A), trusted partner introductions (legal / accounting).
-Typical clients: European brands at the "should we enter China?" decision stage.
+### Module 02 — ENTRY (Launch Operations) — USD 3,000–5,000 per month
+Full operational launch covering account registration (social media + e-commerce), content localisation (CN ↔ EN), supply chain partner vetting, AI search visibility setup (GEO/Schema/SEO), and monthly operations reporting. Duration: 1–2 months typical.
 
-### Module 02 ENTRY — Full Launch Operations
-Price: $3,000–$5,000 per month · Duration: 1–2 months typical
-Includes: social media and e-commerce account setup, content translation and localisation, supply chain partner vetting and introductions, AI search visibility setup (GEO / Schema / SEO), monthly operations report and performance review, AI Agent workflow design on request.
-Typical clients: European brands that have decided to enter China and need full operational execution.
+### Module 03 — GROWTH (Long-Term Strategic Partner) — USD 3,500–6,000 per month
+Ongoing strategic partnership including monthly strategy sessions, deal architecture (business plans, financial models, equity structures), investor and partner introductions, and success fees on major commercial outcomes.
 
-### Module 03 GROWTH — Long-term Strategic Partner
-Price: $3,500–$6,000 per month · Ongoing
-Includes: monthly strategy sessions and on-call advisory, business plans and commercial documents, financial analysis and P&L review, equity structure design, investor and partner introductions, success fee on major commercial outcomes.
-Typical clients: organisations needing a trusted CFO-level strategic partner for sustained cross-border growth.
+## China Platform Registration Expertise
 
-## Additional Services
+ARCEN has conducted detailed analysis of all major Chinese social media and e-commerce platform registration structures, including:
+- Douyin (TikTok CN) — personal, Chinese agent, overseas entity, and WFOE registration options; entity transfer rules; store setup requirements and security deposit structures
+- Xiaohongshu (RED/REDnote) — Blue V enterprise verification for overseas entities; document requirements; store setup; entity transfer restrictions
+- Weibo — enterprise account registration for overseas and domestic entities; store limitations for overseas companies
+- Tmall Global — cross-border e-commerce for overseas entities; fee structure; entity conversion limitations
+- WeChat Mini Programs — dual entity requirement; store setup; entity transfer flexibility
 
-- Hong Kong and mainland China entity setup (via verified legal firms, auditors, company secretaries)
-- Pre-acquisition due diligence: financial health review, risk identification, go/no-go recommendation — before engaging an investment bank
+## WFOE Cost Reference (2025 Estimates)
+- One-time setup: RMB 50,400 (approximately USD 7,330)
+- Annual accounting — small-scale taxpayer: RMB 3,800 (approximately USD 550)
+- Annual accounting — general taxpayer: RMB 5,000 (approximately USD 730)
+- Annual audit (assets/revenue under RMB 10M): RMB 3,600 (approximately USD 520)
+- Legal representative proxy (optional): RMB 40,000/year (approximately USD 5,800)
+- Deregistration: RMB 7,200 (approximately USD 1,100)
+
+## Published Insights
+
+- The 4 Entity Structures for Foreign Brands Entering Chinese Social Media: https://arcen-advisory.vercel.app/insights/china-social-media-registration-structures.html
+- China Social Media Account Ownership — The Transfer Trap: https://arcen-advisory.vercel.app/insights/china-account-ownership-transfer-risk.html
+- China WFOE Subsidiary: Full Cost Breakdown for European Brands: https://arcen-advisory.vercel.app/insights/china-wfoe-subsidiary-cost-breakdown.html
+- Tmall Global vs WeChat Mini Program: Which E-Commerce Entry for Foreign Brands?: https://arcen-advisory.vercel.app/insights/tmall-global-vs-wechat-mini-program.html
+- The Three-Phase China Market Entry Strategy for European Brands: https://arcen-advisory.vercel.app/insights/three-phase-china-market-entry-strategy.html
+- Xiaohongshu for European Brands: Account Types, Verification, and Commercial Access: https://arcen-advisory.vercel.app/insights/xiaohongshu-european-brands-guide.html
+- Douyin E-Commerce for Foreign Brands: Personal Store vs Corporate Store vs Cross-Border Merchant: https://arcen-advisory.vercel.app/insights/douyin-ecommerce-foreign-brands.html
+- China's Platform Ecosystem in 2026: Which Platforms for Which Brand Goals: https://arcen-advisory.vercel.app/insights/china-platform-ecosystem-2026.html
+- Why One Platform Is Never Enough in China — And What to Do About It: https://arcen-advisory.vercel.app/insights/china-social-media-single-platform-mistake.html
+- Why ChatGPT Doesn't Know Your Brand Exists — And How to Fix It: https://arcen-advisory.vercel.app/insights/why-chatgpt-doesnt-know-your-brand.html
+- Five Structural Mistakes European Brands Make When Entering China: https://arcen-advisory.vercel.app/insights/five-structural-mistakes-european-brands-china.html
+- All Insights: https://arcen-advisory.vercel.app/insights/
 
 ## Selected Client Work
 
-- Global top-tier athlete IP (France): CFO and strategic advisor. Commercial development, equity structure, financial governance, deal-making across Europe and Asia.
-- Top-tier European sports organisation: Full China market entry — platform structure, regulatory risk, phased roadmap, ongoing strategic advisory.
-- European entertainment company: China market entry strategy, social media and e-commerce registration, operational execution.
+- European sports organisation — full China market entry analysis across all modules, ongoing
+- European entertainment company — China market entry strategy, social media and e-commerce registration structure, operational execution, ongoing
+- European hardware brand — Growth module, ongoing
+- Global top-tier athlete IP (France) — CFO and strategic advisor, commercial development, equity structure, ongoing
 
-## Why AI Visibility Matters
+## Key Credentials
 
-AI systems (ChatGPT, Perplexity, Claude, Gemini) are becoming the primary discovery channel for B2B buyers and decision-makers globally. If a brand is not structured for AI search, it is invisible to this audience regardless of its Google ranking. ARCEN builds GEO into every engagement because cross-border brands — precisely those trying to reach unfamiliar markets — are most at risk of being undiscoverable in the AI era.
+- Dual doctoral executive founder
+- 20+ AI invention patents
+- USD 581M deal modelling experience
+- 10+ years cross-border execution across Asia and Europe
+- Active client presence: France, Norway, Denmark, Hong Kong, China
 
 ## Frequently Asked Questions
 
 Q: What makes ARCEN different from other China advisory firms?
-A: ARCEN is founded by a dual doctoral executive with both scientific and business administration backgrounds, 20+ AI invention patents, and experience across deal structures totalling $581M. The firm does not hand over reports and leave — it stays engaged through execution until results are real.
+A: ARCEN is founded by a dual doctoral executive with both scientific and business administration backgrounds, 20+ AI invention patents, and experience across deal structures totalling USD 581M. The firm does not hand over reports and leave — it stays engaged through execution until results are real.
 
 Q: How long does a China market entry analysis take?
 A: The CLARITY module delivers a complete feasibility report, registration structure comparison, regulatory checklist, and phased roadmap within 2 weeks.
@@ -58,15 +80,15 @@ A: The CLARITY module delivers a complete feasibility report, registration struc
 Q: Does ARCEN work with Chinese brands going global, not just European brands entering China?
 A: Yes. ARCEN works in both directions. Many engagements involve Chinese organisations expanding into European markets or managing cross-border commercial relationships.
 
-Q: Does ARCEN handle AI visibility for clients?
-A: Yes. AI visibility (GEO) is built into the ENTRY module and available as part of any engagement. This includes structured data implementation, Schema.org markup, content structuring for AI citation, and monitoring AI search presence.
+Q: Does ARCEN handle AI visibility (GEO) for clients?
+A: Yes. AI visibility is built into the ENTRY module and available as part of any engagement. This includes structured data implementation, Schema.org markup, llms.txt, content structuring for AI citation, and monitoring AI search presence.
 
 ## Key Pages
 
 - Homepage: https://arcen-advisory.vercel.app/
 - Services: https://arcen-advisory.vercel.app/#services
 - Cases: https://arcen-advisory.vercel.app/#cases
-- Insights: https://arcen-advisory.vercel.app/#insights
+- Insights: https://arcen-advisory.vercel.app/insights/
 - Contact: https://arcen-advisory.vercel.app/#contact
 
 ## Languages
@@ -75,5 +97,8 @@ English (EN) · French (FR) · Chinese Simplified (ZH)
 
 ## Contact
 
-Inquiry form: https://arcen-advisory.vercel.app/#contact
-Response within 24 hours. No sales calls. No pitch decks.
+Website: https://arcen-advisory.vercel.app/
+Contact form: https://arcen-advisory.vercel.app/#contact
+Response: within 24 hours
+Languages: English, French, Mandarin Chinese
+Base: Hong Kong

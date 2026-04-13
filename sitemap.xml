@@ -1,10 +1,115 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://arcen-advisory.vercel.app/</loc>
     <lastmod>2026-04-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-  <!-- Blog articles: add one <url> block per article (use add-article.js) -->
+  <url>
+    <loc>https://arcen-advisory.vercel.app/insights/</loc>
+    <lastmod>2026-04-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://arcen-advisory.vercel.app/insights/china-social-media-registration-structures.html</loc>
+    <lastmod>2026-04-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arcen-advisory.vercel.app/insights/china-social-media-registration-structures.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://arcen-advisory.vercel.app/insights/china-social-media-registration-structures.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://arcen-advisory.vercel.app/insights/china-social-media-registration-structures.html"/>
+  </url>
+  <url>
+    <loc>https://arcen-advisory.vercel.app/insights/china-account-ownership-transfer-risk.html</loc>
+    <lastmod>2026-04-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arcen-advisory.vercel.app/insights/china-account-ownership-transfer-risk.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://arcen-advisory.vercel.app/insights/china-account-ownership-transfer-risk.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://arcen-advisory.vercel.app/insights/china-account-ownership-transfer-risk.html"/>
+  </url>
+  <url>
+    <loc>https://arcen-advisory.vercel.app/insights/china-wfoe-subsidiary-cost-breakdown.html</loc>
+    <lastmod>2026-04-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arcen-advisory.vercel.app/insights/china-wfoe-subsidiary-cost-breakdown.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://arcen-advisory.vercel.app/insights/china-wfoe-subsidiary-cost-breakdown.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://arcen-advisory.vercel.app/insights/china-wfoe-subsidiary-cost-breakdown.html"/>
+  </url>
+  <url>
+    <loc>https://arcen-advisory.vercel.app/insights/tmall-global-vs-wechat-mini-program.html</loc>
+    <lastmod>2026-04-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arcen-advisory.vercel.app/insights/tmall-global-vs-wechat-mini-program.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://arcen-advisory.vercel.app/insights/tmall-global-vs-wechat-mini-program.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://arcen-advisory.vercel.app/insights/tmall-global-vs-wechat-mini-program.html"/>
+  </url>
+  <url>
+    <loc>https://arcen-advisory.vercel.app/insights/three-phase-china-market-entry-strategy.html</loc>
+    <lastmod>2026-04-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arcen-advisory.vercel.app/insights/three-phase-china-market-entry-strategy.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://arcen-advisory.vercel.app/insights/three-phase-china-market-entry-strategy.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://arcen-advisory.vercel.app/insights/three-phase-china-market-entry-strategy.html"/>
+  </url>
+  <url>
+    <loc>https://arcen-advisory.vercel.app/insights/xiaohongshu-european-brands-guide.html</loc>
+    <lastmod>2026-04-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arcen-advisory.vercel.app/insights/xiaohongshu-european-brands-guide.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://arcen-advisory.vercel.app/insights/xiaohongshu-european-brands-guide.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://arcen-advisory.vercel.app/insights/xiaohongshu-european-brands-guide.html"/>
+  </url>
+  <url>
+    <loc>https://arcen-advisory.vercel.app/insights/douyin-ecommerce-foreign-brands.html</loc>
+    <lastmod>2026-04-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arcen-advisory.vercel.app/insights/douyin-ecommerce-foreign-brands.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://arcen-advisory.vercel.app/insights/douyin-ecommerce-foreign-brands.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://arcen-advisory.vercel.app/insights/douyin-ecommerce-foreign-brands.html"/>
+  </url>
+  <url>
+    <loc>https://arcen-advisory.vercel.app/insights/china-platform-ecosystem-2026.html</loc>
+    <lastmod>2026-04-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arcen-advisory.vercel.app/insights/china-platform-ecosystem-2026.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://arcen-advisory.vercel.app/insights/china-platform-ecosystem-2026.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://arcen-advisory.vercel.app/insights/china-platform-ecosystem-2026.html"/>
+  </url>
+  <url>
+    <loc>https://arcen-advisory.vercel.app/insights/china-social-media-single-platform-mistake.html</loc>
+    <lastmod>2026-04-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arcen-advisory.vercel.app/insights/china-social-media-single-platform-mistake.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://arcen-advisory.vercel.app/insights/china-social-media-single-platform-mistake.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://arcen-advisory.vercel.app/insights/china-social-media-single-platform-mistake.html"/>
+  </url>
+  <url>
+    <loc>https://arcen-advisory.vercel.app/insights/why-chatgpt-doesnt-know-your-brand.html</loc>
+    <lastmod>2026-04-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arcen-advisory.vercel.app/insights/why-chatgpt-doesnt-know-your-brand.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://arcen-advisory.vercel.app/insights/why-chatgpt-doesnt-know-your-brand.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://arcen-advisory.vercel.app/insights/why-chatgpt-doesnt-know-your-brand.html"/>
+  </url>
+  <url>
+    <loc>https://arcen-advisory.vercel.app/insights/five-structural-mistakes-european-brands-china.html</loc>
+    <lastmod>2026-04-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arcen-advisory.vercel.app/insights/five-structural-mistakes-european-brands-china.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://arcen-advisory.vercel.app/insights/five-structural-mistakes-european-brands-china.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://arcen-advisory.vercel.app/insights/five-structural-mistakes-european-brands-china.html"/>
+  </url>
 </urlset>
