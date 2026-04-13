@@ -1229,6 +1229,10 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // ── AI CHAT ───────────────────────────────────────────────────────────────────
+var CHAT_HISTORY = [];
+
+var SYSTEM_PROMPT = 'You are the ARCEN advisory assistant. ARCEN is a strategic advisory firm based in Hong Kong specialising in cross-border brand strategy — helping European brands enter China and Chinese brands go global.\n\nBe concise (2–4 sentences per reply), professional, and direct. Guide complex questions towards the contact form for a real conversation.\n\nKey services:\n- Module 01 CLARITY: Market investigation + entry blueprint ($1K–$2K, 2-week delivery)\n- Module 02 ENTRY: Full launch operations ($3K–$5K/month)\n- Module 03 GROWTH: Long-term strategic partner ($3.5K–$6K/month)\n\nAlways respond in the same language as the user\'s message. Never invent specific client names or case details.';
+
 var CHAT_RESPONSES = {
   en: {
     greeting: "Hi! I'm the ARCEN AI assistant. How can I help you today?",
@@ -1301,27 +1305,47 @@ function closeAI() {
   document.getElementById('aiDrawer').classList.remove('open');
   document.getElementById('aiOverlay').classList.remove('open');
   document.body.style.overflow = '';
+  CHAT_HISTORY = [];
 }
 
 function chatSend() {
   var inp = document.getElementById('aiInp');
   var msg = inp.value.trim();
   if (!msg) return;
+
   addMsg(msg, 'user');
+  CHAT_HISTORY.push({ role: 'user', content: msg });
   inp.value = '';
   inp.style.height = 'auto';
-  // Typing indicator
+
   var msgs = document.getElementById('aiMsgs');
   var typing = document.createElement('div');
   typing.className = 'msg-typing';
   typing.innerHTML = '<span></span><span></span><span></span>';
   msgs.appendChild(typing);
   msgs.scrollTop = msgs.scrollHeight;
-  // TODO: replace with real Groq API call via /api/chat.js
-  setTimeout(function() {
+
+  var history = CHAT_HISTORY.slice(-6);
+  var payload = [{ role: 'system', content: SYSTEM_PROMPT }].concat(history);
+
+  fetch('/api/chat', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ messages: payload })
+  })
+  .then(function(r) { return r.json(); })
+  .then(function(data) {
     typing.remove();
-    addMsg(chatGetResponse(msg), 'bot');
-  }, 700);
+    var reply = data.choices[0].message.content;
+    CHAT_HISTORY.push({ role: 'assistant', content: reply });
+    addMsg(reply, 'bot');
+  })
+  .catch(function() {
+    typing.remove();
+    var fallback = chatGetResponse(msg);
+    CHAT_HISTORY.push({ role: 'assistant', content: fallback });
+    addMsg(fallback, 'bot');
+  });
 }
 
 document.addEventListener('DOMContentLoaded', function() {
