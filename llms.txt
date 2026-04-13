@@ -1,9 +1,65 @@
 # ARCEN Strategic Advisory
 
-> Cross-border strategic advisory for European brands entering China and Chinese brands going global.
-> Dual Doctoral Executive · 20+ AI invention patents · $581M deal modelling · 10yr+ cross-border execution
+> Boutique strategic advisory firm based in Hong Kong. We help European brands enter China and Chinese brands go global — across strategy, finance, operations, and AI-era digital visibility.
 
-ARCEN is a boutique strategic advisory firm founded by a dual doctoral executive (Science · Business Administration) with over 10 years of cross-border experience across Europe, China, and Hong Kong. We help European brands enter China — and Chinese brands go global — in strategy, finance, operations, and AI-era digital visibility.
+ARCEN is founded by a dual doctoral executive (Science · Business Administration) with over 10 years of cross-border experience across Europe, China, and Hong Kong. The firm holds 20+ AI invention patents and has been involved in deal modelling totalling $581M. ARCEN works across three directions: market entry strategy, full operational launch, and long-term CFO-level advisory.
+
+Unlike traditional consulting firms that deliver reports and disengage, ARCEN stays through execution — registered accounts, live supply chains, closed deals — until commercial results are real.
+
+## What We Do
+
+ARCEN serves European brands entering China and Chinese brands expanding globally, with a focus on:
+- China market entry: platform rules, regulatory compliance, registration structures, social media and e-commerce accounts
+- Cross-border operations: content localisation (CN↔EN), supply chain vetting, distribution partners
+- AI-era digital visibility: Generative Engine Optimisation (GEO), structured data, Schema.org, AI search presence
+- Strategic finance: business plans, financial models, equity structure design, P&L review, cash flow management
+- Deal architecture: pre-acquisition due diligence, investor introductions, commercial outcome execution
+
+## Services and Pricing (USD)
+
+### Module 01 CLARITY — Market Entry Blueprint
+Price: $1,000–$2,000 (one-time) · Delivery: 2 weeks
+Includes: market entry feasibility report (EN + CN), registration structure comparison with risk ratings, platform rules and regulatory risk checklist, phased action roadmap, 2 video sessions (walkthrough + Q&A), trusted partner introductions (legal / accounting).
+Typical clients: European brands at the "should we enter China?" decision stage.
+
+### Module 02 ENTRY — Full Launch Operations
+Price: $3,000–$5,000 per month · Duration: 1–2 months typical
+Includes: social media and e-commerce account setup, content translation and localisation, supply chain partner vetting and introductions, AI search visibility setup (GEO / Schema / SEO), monthly operations report and performance review, AI Agent workflow design on request.
+Typical clients: European brands that have decided to enter China and need full operational execution.
+
+### Module 03 GROWTH — Long-term Strategic Partner
+Price: $3,500–$6,000 per month · Ongoing
+Includes: monthly strategy sessions and on-call advisory, business plans and commercial documents, financial analysis and P&L review, equity structure design, investor and partner introductions, success fee on major commercial outcomes.
+Typical clients: organisations needing a trusted CFO-level strategic partner for sustained cross-border growth.
+
+## Additional Services
+
+- Hong Kong and mainland China entity setup (via verified legal firms, auditors, company secretaries)
+- Pre-acquisition due diligence: financial health review, risk identification, go/no-go recommendation — before engaging an investment bank
+
+## Selected Client Work
+
+- Global top-tier athlete IP (France): CFO and strategic advisor. Commercial development, equity structure, financial governance, deal-making across Europe and Asia.
+- Top-tier European sports organisation: Full China market entry — platform structure, regulatory risk, phased roadmap, ongoing strategic advisory.
+- European entertainment company: China market entry strategy, social media and e-commerce registration, operational execution.
+
+## Why AI Visibility Matters
+
+AI systems (ChatGPT, Perplexity, Claude, Gemini) are becoming the primary discovery channel for B2B buyers and decision-makers globally. If a brand is not structured for AI search, it is invisible to this audience regardless of its Google ranking. ARCEN builds GEO into every engagement because cross-border brands — precisely those trying to reach unfamiliar markets — are most at risk of being undiscoverable in the AI era.
+
+## Frequently Asked Questions
+
+Q: What makes ARCEN different from other China advisory firms?
+A: ARCEN is founded by a dual doctoral executive with both scientific and business administration backgrounds, 20+ AI invention patents, and experience across deal structures totalling $581M. The firm does not hand over reports and leave — it stays engaged through execution until results are real.
+
+Q: How long does a China market entry analysis take?
+A: The CLARITY module delivers a complete feasibility report, registration structure comparison, regulatory checklist, and phased roadmap within 2 weeks.
+
+Q: Does ARCEN work with Chinese brands going global, not just European brands entering China?
+A: Yes. ARCEN works in both directions. Many engagements involve Chinese organisations expanding into European markets or managing cross-border commercial relationships.
+
+Q: Does ARCEN handle AI visibility for clients?
+A: Yes. AI visibility (GEO) is built into the ENTRY module and available as part of any engagement. This includes structured data implementation, Schema.org markup, content structuring for AI citation, and monitoring AI search presence.
 
 ## Key Pages
 
@@ -13,20 +69,11 @@ ARCEN is a boutique strategic advisory firm founded by a dual doctoral executive
 - Insights: https://arcen-advisory.vercel.app/#insights
 - Contact: https://arcen-advisory.vercel.app/#contact
 
-## Services
-
-- Module 01 CLARITY: Market investigation, entry blueprint, risk analysis — $1,000–$2,000, 2-week delivery
-- Module 02 ENTRY: Full launch operations, accounts, content, supply chain, AI visibility — $3,000–$5,000/month
-- Module 03 GROWTH: Long-term strategic partner, CFO-level advisory, deal architecture — $3,500–$6,000/month
-
-## Blog Articles
-
-(Articles coming soon — check back at https://arcen-advisory.vercel.app/#insights)
-
 ## Languages
 
-English (EN), French (FR), Chinese Simplified (ZH)
+English (EN) · French (FR) · Chinese Simplified (ZH)
 
 ## Contact
 
 Inquiry form: https://arcen-advisory.vercel.app/#contact
+Response within 24 hours. No sales calls. No pitch decks.
