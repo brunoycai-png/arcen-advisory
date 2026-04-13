@@ -79,11 +79,11 @@
 
 ## [FACT] 待办（部署前）
 
-- [ ] GitHub Secrets 设置：`VERCEL_TOKEN` + `VERCEL_ORG_ID` + `VERCEL_PROJECT_ID`
-- [ ] 创建 `.github/workflows/deploy.yml`
-- [ ] Google Search Console 注册验证
-- [ ] Bing Webmaster Tools + IndexNow key
-- [ ] `add-article.js` 里改 BASE_URL 为 arcen-advisory.vercel.app
+- [x] GitHub Secrets 设置：`VERCEL_TOKEN` + `VERCEL_ORG_ID`
+- [x] 创建 `.github/workflows/deploy.yml`
+- [x] Google Search Console 验证 ✅ + sitemap 已提交
+- [ ] Bing Webmaster Tools + IndexNow key（注册后把 key 告诉 Claude，设 GitHub Secret `INDEXNOW_KEY`）
+- [x] `add-article.js` BASE_URL 已设置
 
 ---
 
