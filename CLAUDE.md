@@ -27,6 +27,7 @@
 | Supabase KEY | sb_publishable_xqjvFfsbHlT8A7CsdaEsMw_Q2asL6i8 |
 | Supabase project ID | lgcxehxrpnzvyjojukod |
 | Groq model | llama-3.1-8b-instant |
+| AI chat endpoint | `/api/chat` (Vercel Edge Function) |
 | Languages | EN / FR / ZH |
 
 ---
@@ -149,6 +150,6 @@ git add -A && git commit -m "..." && git push origin main
 |------|------|
 | Supabase anon key 前端暴露 | ✅ 安全（RLS 保护，anon 只能 INSERT） |
 | RLS 开启 | ✅ inquiries + chat_logs 均已开启 |
-| Groq API key | ✅ 当前不存在（AI 对话用本地关键词匹配） |
+| Groq API key | ✅ 存在 Vercel 加密环境变量，前端不可见 |
 | 速率限制 | ⚠️ 待做（当前无防刷） |
 | CSP unsafe-inline | ⚠️ 单文件架构不可避免，已知风险 |
